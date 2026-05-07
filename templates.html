@@ -1,21 +1,70 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "AI Study Companion",
-  "description": "Build an intelligent study assistant that helps students organize notes, generate flashcards, create quizzes, and track learning progress — all powered by AI.",
-  "applicationCategory": "Education",
-  "operatingSystem": "Web",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  },
-  "creator": {
-    "@type": "Organization",
-    "name": "MeDo",
-    "url": "https://medo.dev"
-  }
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "AI Study Companion",
+      "description": "Build an intelligent study assistant that helps students organize notes, generate flashcards, create quizzes, and track learning progress — all powered by AI.",
+      "applicationCategory": "Education",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "MeDo",
+        "url": "https://medo.dev"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "MeDo", "item": "https://medo.dev"},
+        {"@type": "ListItem", "position": 2, "name": "Education", "item": "https://medo.dev/marketplace/education"},
+        {"@type": "ListItem", "position": 3, "name": "AI Study Companion"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is the AI Study Companion template free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. You can start building with the AI Study Companion template for free on MeDo. No credit card or coding skills required — MeDo handles hosting and deployment automatically."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does AI flashcard generation work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Paste your notes, textbook highlights, or lecture slides into the study companion. The AI analyzes your content, identifies key concepts, and generates study-ready flashcards with questions and answers matched to your actual material."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I customize this template for my specific course or subject?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. The template is fully customizable through MeDo's AI conversation interface. You can adjust quiz formats, add subjects, change the visual design, and tailor the study tools to any course, certification exam, or learning goal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is spaced repetition and why does it help studying?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Spaced repetition is a scientifically-proven learning technique that schedules reviews at increasing intervals. The AI Study Companion automatically surfaces flashcards right before you would forget them, so you study less but remember more over the long term."
+          }
+        }
+      ]
+    }
+  ]
 }
 </script>
 <style>
@@ -114,6 +163,16 @@
 .medo-tpl .mt-scard-meta{padding:6px 24px 16px!important;display:flex!important;gap:14px!important;font-size:12px!important;color:#707070!important}
 .medo-tpl .mt-scard-meta span{display:flex!important;align-items:center!important;gap:4px!important}
 
+/* ========== FAQ ========== */
+.medo-tpl .mt-faq{max-width:800px!important;margin:0 auto!important}
+.medo-tpl .mt-faq details{background:#f5f5f7!important;border-radius:16px!important;margin-bottom:8px!important;overflow:hidden!important}
+.medo-tpl .mt-faq summary{padding:18px 24px!important;font-size:17px!important;font-weight:600!important;color:#1d1d1f!important;letter-spacing:-.1px!important;cursor:pointer!important;list-style:none!important;display:flex!important;align-items:center!important;justify-content:space-between!important;transition:background .2s ease!important}
+.medo-tpl .mt-faq summary::-webkit-details-marker{display:none!important}
+.medo-tpl .mt-faq summary::after{content:"+"!important;font-size:20px!important;font-weight:300!important;color:#707070!important;transition:transform .2s ease!important;flex-shrink:0!important;margin-left:16px!important}
+.medo-tpl .mt-faq details[open] summary::after{content:"\2212"!important}
+.medo-tpl .mt-faq details[open] summary{background:rgba(0,113,227,.04)!important}
+.medo-tpl .mt-faq .mt-faq-body{padding:0 24px 20px!important;font-size:15px!important;color:#707070!important;line-height:1.6!important;letter-spacing:-.04px!important}
+
 /* ========== CTA BOX ========== */
 .medo-tpl .mt-cta-box{text-align:center!important;padding:80px 32px!important;background:linear-gradient(135deg,#1d1d1f 0%,#2d2d3f 100%)!important;border-radius:28px!important;margin-bottom:80px!important}
 .medo-tpl .mt-cta-box h3{font-family:Georgia,'Times New Roman','Noto Serif',serif!important;font-size:32px!important;font-weight:700!important;line-height:1.2!important;letter-spacing:-.5px!important;margin-bottom:12px!important;color:#fff!important}
@@ -133,7 +192,10 @@
 .medo-tpl .mt-rcard-body p{font-size:14px!important;color:#707070!important}
 
 /* ========== FOOTER ========== */
-.medo-tpl .mt-footer{padding:32px 0!important;text-align:center!important;color:#707070!important;font-size:14px!important;letter-spacing:-.04px!important}
+.medo-tpl .mt-footer{padding:40px 0 32px!important;text-align:center!important;color:#707070!important;font-size:14px!important;letter-spacing:-.04px!important}
+.medo-tpl .mt-footer-nav{display:flex!important;flex-wrap:wrap!important;justify-content:center!important;gap:8px!important;margin-bottom:20px!important}
+.medo-tpl .mt-footer-nav a{display:inline-block!important;font-size:13px!important;color:#707070!important;background:#f5f5f7!important;padding:6px 14px!important;border-radius:999px!important;transition:background .2s ease,color .2s ease!important}
+.medo-tpl .mt-footer-nav a:hover{background:rgba(0,113,227,.1)!important;color:#0071e3!important}
 .medo-tpl .mt-footer a{color:#0066cc!important}
 
 /* ========== MOBILE ========== */
@@ -183,6 +245,11 @@
   .medo-tpl .mt-related{grid-template-columns:1fr!important;gap:12px!important}
   .medo-tpl .mt-rcard{border-radius:16px!important}
   .medo-tpl .mt-rcard-body h4{font-size:15px!important}
+  .medo-tpl .mt-faq details{border-radius:12px!important;margin-bottom:6px!important}
+  .medo-tpl .mt-faq summary{padding:14px 18px!important;font-size:15px!important}
+  .medo-tpl .mt-faq .mt-faq-body{padding:0 18px 16px!important;font-size:14px!important}
+  .medo-tpl .mt-footer-nav{gap:6px!important;margin-bottom:16px!important}
+  .medo-tpl .mt-footer-nav a{font-size:12px!important;padding:5px 12px!important}
   .medo-tpl .mt-footer{font-size:12px!important}
 }
 
@@ -207,7 +274,7 @@
   <div class="mt-split">
     <div class="mt-split-left mt-split-sticky">
       <div class="mt-screenshot-inline">
-        <img src="https://miaoda-edit-image.s3cdn.medo.dev/7mbq5z8z0lj5/IMG-7md0v1kxrk74.png" alt="AI Study Companion template preview" width="1100" height="619" loading="lazy">
+        <img src="https://miaoda-edit-image.s3cdn.medo.dev/7mbq5z8z0lj5/IMG-7md0v1kxrk74.png" alt="AI Study Companion app screenshot — flashcard and quiz generation interface" width="1100" height="619" loading="lazy">
       </div>
       <h3>Everything You Need to Study Smarter</h3>
       <p>Built-in AI tools for flashcard generation, adaptive quizzes, and progress analytics — ready to use in minutes, not months.</p>
@@ -345,7 +412,7 @@
       <h3>Related Templates</h3>
     </div>
     <div class="mt-related">
-      <a href="https://medo.dev/templates/project-management-tool" class="mt-rcard">
+      <a href="https://medo.dev/apps/app-7ccwjw8p8gsh" class="mt-rcard">
         <div class="mt-rcard-img">
           <img src="https://miaoda-edit-image.s3cdn.medo.dev/7ccwjw8p8gsh/IMG-7cdjuo9p0jk0.png" alt="Project Management Tool template" loading="lazy">
         </div>
@@ -354,7 +421,7 @@
           <p>Productivity</p>
         </div>
       </a>
-      <a href="https://medo.dev/templates/developer-portfolio" class="mt-rcard">
+      <a href="https://medo.dev/apps/app-9y0vsccu1og1" class="mt-rcard">
         <div class="mt-rcard-img">
           <img src="https://miaoda-screenshot-img.s3cdn.medo.dev/preview_screen/app-9y0vsccu1og1/app-9y0vsccu1og1_1774872288992_ebe3.png" alt="Developer Portfolio template" loading="lazy">
         </div>
@@ -363,7 +430,7 @@
           <p>Personal</p>
         </div>
       </a>
-      <a href="https://medo.dev/templates/ecommerce-store" class="mt-rcard">
+      <a href="https://medo.dev/apps/app-8q7vkvuq2g3l" class="mt-rcard">
         <div class="mt-rcard-img">
           <img src="https://miaoda-screenshot-img.s3cdn.medo.dev/preview_screen/app-8q7vkvuq2g3l/app-8q7vkvuq2g3l_1767628673162_402d.png" alt="E-commerce Store template" loading="lazy">
         </div>
@@ -382,9 +449,9 @@
       <p>Real apps created by MeDo users — see what's possible.</p>
     </div>
     <div class="mt-showcase">
-      <a href="https://app-7mbq5z8z0lj5.appmedo.com" target="_blank" rel="noopener" class="mt-scard">
+      <a href="https://medo.dev/apps/app-7mbq5z8z0lj5" class="mt-scard">
         <div class="mt-scard-img">
-          <img src="https://miaoda-edit-image.s3cdn.medo.dev/7mbq5z8z0lj5/IMG-7md0v1kxrk74.png" alt="SpeakEasy English" loading="lazy" width="400" height="225">
+          <img src="https://miaoda-edit-image.s3cdn.medo.dev/7mbq5z8z0lj5/IMG-7md0v1kxrk74.png" alt="SpeakEasy English — AI conversation practice app built with MeDo" loading="lazy" width="400" height="225">
         </div>
         <div class="mt-scard-body">
           <h4>SpeakEasy English</h4>
@@ -395,9 +462,9 @@
           <span>321 likes</span>
         </div>
       </a>
-      <a href="https://app-6s6nf1wtxzpd.appmedo.com" target="_blank" rel="noopener" class="mt-scard">
+      <a href="https://medo.dev/apps/app-6s6nf1wtxzpd" class="mt-scard">
         <div class="mt-scard-img">
-          <img src="https://miaoda-edit-image.s3cdn.medo.dev/6s6nf1wtxzpd/IMG-6s733cr1mxhc.png" alt="Function Graphing Tool" loading="lazy" width="400" height="225">
+          <img src="https://miaoda-edit-image.s3cdn.medo.dev/6s6nf1wtxzpd/IMG-6s733cr1mxhc.png" alt="Function Graphing Tool — interactive math app built with MeDo" loading="lazy" width="400" height="225">
         </div>
         <div class="mt-scard-body">
           <h4>Function Graphing Tool</h4>
@@ -408,9 +475,9 @@
           <span>268 likes</span>
         </div>
       </a>
-      <a href="https://app-7ycjfcj3277k.appmedo.com" target="_blank" rel="noopener" class="mt-scard">
+      <a href="https://medo.dev/apps/app-7ycjfcj3277k" class="mt-scard">
         <div class="mt-scard-img">
-          <img src="https://miaoda-edit-image.s3cdn.medo.dev/7ycjfcj3277k/IMG-7ydzfkyuno5c.png" alt="StudyFlow Dashboard" loading="lazy" width="400" height="225">
+          <img src="https://miaoda-edit-image.s3cdn.medo.dev/7ycjfcj3277k/IMG-7ydzfkyuno5c.png" alt="StudyFlow Dashboard — learning analytics app built with MeDo" loading="lazy" width="400" height="225">
         </div>
         <div class="mt-scard-body">
           <h4>StudyFlow Dashboard</h4>
@@ -424,7 +491,43 @@
     </div>
   </div>
 
+  <!-- ===== FAQ ===== -->
+  <div class="mt-section">
+    <div class="mt-section-header">
+      <h3>Frequently Asked Questions</h3>
+    </div>
+    <div class="mt-faq">
+      <details>
+        <summary>Is the AI Study Companion template free to use?</summary>
+        <div class="mt-faq-body">Yes. You can start building with this template for free on MeDo — no credit card or coding skills required. MeDo handles hosting and deployment automatically, so there are no server costs to get started.</div>
+      </details>
+      <details>
+        <summary>How does AI flashcard generation work?</summary>
+        <div class="mt-faq-body">Paste your notes, textbook highlights, or lecture slides into the study companion. The AI analyzes your content, identifies key concepts, and generates study-ready flashcards with questions and answers matched to your actual material.</div>
+      </details>
+      <details>
+        <summary>Can I customize this template for my specific course or subject?</summary>
+        <div class="mt-faq-body">Absolutely. The template is fully customizable through MeDo's AI conversation interface. You can adjust quiz formats, add new subjects, change the visual design, and tailor the study tools to any course, certification exam, or learning goal.</div>
+      </details>
+      <details>
+        <summary>What is spaced repetition and why does it help studying?</summary>
+        <div class="mt-faq-body">Spaced repetition is a scientifically-proven learning technique that schedules reviews at increasing intervals. The AI Study Companion automatically surfaces flashcards right before you would forget them, so you study less but remember more over the long term.</div>
+      </details>
+    </div>
+  </div>
+
   <div class="mt-footer">
+    <div class="mt-footer-nav">
+      <a href="https://medo.dev/marketplace/education">Education</a>
+      <a href="https://medo.dev/marketplace/website">Website</a>
+      <a href="https://medo.dev/marketplace/marketing">Marketing</a>
+      <a href="https://medo.dev/marketplace/productivity">Productivity</a>
+      <a href="https://medo.dev/marketplace/e-commerce">E-commerce</a>
+      <a href="https://medo.dev/marketplace/tools">Tools</a>
+      <a href="https://medo.dev/marketplace/games">Games</a>
+      <a href="https://medo.dev/marketplace/survey">Survey</a>
+      <a href="https://medo.dev/marketplace/research">Research</a>
+    </div>
     <p>&copy; 2026 <a href="https://medo.dev">MeDo</a>. Build any app with AI — no coding required.</p>
   </div>
 

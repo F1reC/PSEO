@@ -82,10 +82,6 @@ Footer
 
 - `templates.html`：AI Study Companion 模板的最新版本（从 `ai-study-companion-v2.html` 重命名），包含 JSON-LD + 内联 CSS + 完整页面结构
 
-## 已知问题
-
-- `templates.html` 中 Related Templates 链接仍使用 `https://medo.dev/templates/...` 格式，Built with MeDo 链接使用 `https://app-{id}.appmedo.com` 格式，均不符合内链策略（应使用 `https://medo.dev/apps/app-{appId}`）
-
 ## 开发流程
 
 1. 生成 HTML 模板片段（含 JSON-LD + CSS + HTML 内容）
