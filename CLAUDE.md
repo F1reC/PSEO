@@ -1,5 +1,7 @@
 # CLAUDE.md
 
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
 ## 项目简介
 
 PSEO（Programmatic SEO）项目，为 MeDo（medo.dev）生成 SEO 优化的模板落地页 HTML 片段，嵌入到 Ghost CMS 中作为页面内容展示。
@@ -78,7 +80,11 @@ Footer
 
 ## 文件说明
 
-- `ai-study-companion-v2.html`：AI Study Companion 模板的最新版本，包含 SEO 修复 + 视觉美化
+- `templates.html`：AI Study Companion 模板的最新版本（从 `ai-study-companion-v2.html` 重命名），包含 JSON-LD + 内联 CSS + 完整页面结构
+
+## 已知问题
+
+- `templates.html` 中 Related Templates 链接仍使用 `https://medo.dev/templates/...` 格式，Built with MeDo 链接使用 `https://app-{id}.appmedo.com` 格式，均不符合内链策略（应使用 `https://medo.dev/apps/app-{appId}`）
 
 ## 开发流程
 
