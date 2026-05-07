@@ -1,0 +1,535 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Portfolio Website",
+      "description": "Build a professional portfolio website to showcase your projects, skills, experience timeline, and contact information — all powered by AI.",
+      "applicationCategory": "Website",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "MeDo",
+        "url": "https://medo.dev"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "MeDo", "item": "https://medo.dev"},
+        {"@type": "ListItem", "position": 2, "name": "Website", "item": "https://medo.dev/marketplace/website"},
+        {"@type": "ListItem", "position": 3, "name": "Portfolio Website"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is the Portfolio Website template free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. You can start building with the Portfolio Website template for free on MeDo. No credit card or coding skills required — MeDo handles hosting and deployment automatically."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I customize the portfolio design and layout?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. The template is fully customizable through MeDo's AI conversation interface. You can adjust the color scheme, typography, section order, project layout, and overall design to match your personal brand."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the portfolio website mobile-friendly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Every portfolio built with this template is fully responsive out of the box. It adapts seamlessly to desktop, tablet, and mobile screens so recruiters and clients can view your work on any device."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I host the portfolio on my own domain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "MeDo provides instant hosting with a shareable link for your portfolio. For custom domain setup, you can export the generated code and deploy it to your preferred hosting provider, or use MeDo's built-in hosting for a hassle-free experience."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+/* ========== GHOST WRAPPER RESET ========== */
+.kg-html-card,.kg-card,.gh-content .kg-html-card{background:transparent!important;border:none!important;box-shadow:none!important;border-radius:0!important;padding:0!important;margin-left:0!important;margin-right:0!important;max-width:none!important}
+/* ========== RESET ========== */
+.medo-tpl,.medo-tpl *,.medo-tpl *::before,.medo-tpl *::after{box-sizing:border-box!important;margin:0!important;padding:0!important;border:none!important;text-decoration:none!important;list-style:none!important;outline:none!important;box-shadow:none!important;float:none!important;background:transparent!important}
+.medo-tpl{font-family:'SF Pro Text',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif!important;color:#1d1d1f!important;line-height:1.47!important;-webkit-font-smoothing:antialiased!important;width:calc(100vw - 200px)!important;position:relative!important;left:50%!important;margin-left:calc(-50vw + 100px)!important;overflow:hidden!important}
+.medo-tpl a{color:inherit!important;text-decoration:none!important}
+.medo-tpl a:hover{text-decoration:none!important}
+.medo-tpl img{max-width:100%!important;height:auto!important;display:block!important;border:none!important}
+.medo-tpl ul{list-style:none!important;margin:0!important;padding:0!important}
+.medo-tpl li{margin:0!important;padding:0!important}
+.medo-tpl li::marker{content:""!important;display:none!important}
+.medo-tpl p{margin:0!important;padding:0!important}
+.medo-tpl h2,.medo-tpl h3,.medo-tpl h4{margin:0!important;padding:0!important}
+.medo-tpl svg{background:transparent!important}
+
+.medo-tpl .mt-container{max-width:1440px!important;margin:0 auto!important;padding:0 40px!important}
+
+/* ========== KEYFRAMES ========== */
+@keyframes mt-glow{0%,100%{box-shadow:0 4px 20px rgba(0,113,227,.35)!important}50%{box-shadow:0 4px 32px rgba(0,113,227,.55)!important}}
+
+/* ========== HERO ========== */
+.medo-tpl .mt-hero{text-align:center!important;padding:80px 0 48px!important}
+.medo-tpl .mt-hero-badge{display:inline-block!important;font-size:13px!important;font-weight:600!important;color:#0071e3!important;text-transform:uppercase!important;letter-spacing:1px!important;margin-bottom:16px!important;background:rgba(0,113,227,.08)!important;padding:6px 16px!important;border-radius:999px!important}
+.medo-tpl .mt-hero h2{font-family:Georgia,'Times New Roman','Noto Serif',serif!important;font-size:48px!important;font-weight:700!important;line-height:1.1!important;letter-spacing:-.8px!important;color:#1d1d1f!important;margin-bottom:20px!important}
+.medo-tpl .mt-hero-desc{font-size:20px!important;font-weight:300!important;color:#474747!important;letter-spacing:-.2px!important;line-height:1.4!important;max-width:720px!important;margin:0 auto 32px!important}
+.medo-tpl .mt-cta{display:inline-flex!important;align-items:center!important;gap:8px!important;background:#0071e3!important;color:#fff!important;padding:12px 24px!important;border-radius:999px!important;font-size:17px!important;font-weight:400!important;letter-spacing:-.1px!important;transition:background .3s ease,transform .2s ease!important;cursor:pointer!important;text-decoration:none!important}
+.medo-tpl .mt-cta:hover{background:#0077ed!important;color:#fff!important;text-decoration:none!important;transform:translateY(-1px)!important}
+.medo-tpl .mt-cta svg{width:18px!important;height:18px!important;flex-shrink:0!important}
+
+/* ========== SCREENSHOT ========== */
+.medo-tpl .mt-screenshot-inline{border-radius:20px!important;overflow:hidden!important;margin-bottom:20px!important;box-shadow:0 8px 40px rgba(0,0,0,.12),0 2px 8px rgba(0,0,0,.06)!important}
+.medo-tpl .mt-screenshot-inline img{width:100%!important;display:block!important}
+
+/* ========== SPLIT LAYOUT ========== */
+.medo-tpl .mt-split{display:grid!important;grid-template-columns:2fr 3fr!important;gap:48px!important;align-items:start!important;margin-bottom:80px!important}
+.medo-tpl .mt-split-left,.medo-tpl .mt-split-right{background:transparent!important}
+.medo-tpl .mt-split-left h3{font-family:Georgia,'Times New Roman','Noto Serif',serif!important;font-size:32px!important;font-weight:700!important;line-height:1.2!important;letter-spacing:-.5px!important;color:#1d1d1f!important;margin-bottom:12px!important}
+.medo-tpl .mt-split-left>p{font-size:17px!important;color:#707070!important;letter-spacing:-.1px!important;line-height:1.47!important;margin-bottom:20px!important}
+.medo-tpl .mt-split-sticky{position:sticky!important;top:32px!important}
+.medo-tpl .mt-try-wrap{text-align:center!important;margin-top:28px!important;display:block!important}
+.medo-tpl .mt-try-btn{display:inline-flex!important;align-items:center!important;gap:8px!important;background:linear-gradient(135deg,#0071e3 0%,#005bb5 100%)!important;color:#fff!important;padding:14px 32px!important;border-radius:14px!important;font-size:17px!important;font-weight:600!important;letter-spacing:-.1px!important;cursor:pointer!important;text-decoration:none!important;transition:transform .2s ease,box-shadow .3s ease!important;box-shadow:0 2px 12px rgba(0,113,227,.3)!important}
+.medo-tpl .mt-try-btn:hover{background:linear-gradient(135deg,#0077ed 0%,#0062c4 100%)!important;color:#fff!important;text-decoration:none!important;transform:translateY(-2px)!important;box-shadow:0 4px 20px rgba(0,113,227,.4)!important}
+.medo-tpl .mt-trust{font-size:13px!important;color:#999!important;margin-top:14px!important;letter-spacing:-.02px!important}
+
+/* ========== SECTIONS ========== */
+.medo-tpl .mt-section{margin-bottom:80px!important}
+.medo-tpl .mt-section-header{text-align:center!important;margin-bottom:40px!important}
+.medo-tpl .mt-section-header h3{font-family:Georgia,'Times New Roman','Noto Serif',serif!important;font-size:32px!important;font-weight:700!important;line-height:1.2!important;letter-spacing:-.5px!important;color:#1d1d1f!important;margin-bottom:8px!important}
+.medo-tpl .mt-section-header p{font-size:17px!important;color:#707070!important;letter-spacing:-.1px!important;line-height:1.47!important;max-width:600px!important;margin:0 auto!important}
+
+/* ========== FEATURE CARDS ========== */
+.medo-tpl .mt-features{display:grid!important;grid-template-columns:repeat(2,1fr)!important;gap:14px!important}
+.medo-tpl .mt-feat{padding:24px!important;background:#f5f5f7!important;border-radius:20px!important;transition:transform .3s ease,box-shadow .3s ease!important}
+.medo-tpl .mt-feat:hover{transform:translateY(-4px)!important;box-shadow:0 8px 30px rgba(0,0,0,.08)!important}
+.medo-tpl .mt-feat-icon{width:44px!important;height:44px!important;margin-bottom:12px!important;color:#0071e3!important;background:rgba(0,113,227,.1)!important;border-radius:12px!important;display:flex!important;align-items:center!important;justify-content:center!important}
+.medo-tpl .mt-feat-icon svg{width:24px!important;height:24px!important;stroke:currentColor!important;fill:none!important;stroke-width:1.5!important;stroke-linecap:round!important;stroke-linejoin:round!important}
+.medo-tpl .mt-feat h4{font-size:17px!important;font-weight:600!important;color:#1d1d1f!important;letter-spacing:-.1px!important;margin-bottom:6px!important}
+.medo-tpl .mt-feat p{font-size:15px!important;color:#707070!important;line-height:1.47!important;letter-spacing:-.04px!important}
+
+/* ========== PERFECT FOR ========== */
+.medo-tpl .mt-pf-grid{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:16px!important}
+.medo-tpl .mt-pf{padding:28px!important;background:#fff!important;border-radius:20px!important;transition:transform .3s ease,box-shadow .3s ease!important;box-shadow:0 1px 4px rgba(0,0,0,.06),0 0 0 1px rgba(0,0,0,.04)!important}
+.medo-tpl .mt-pf:hover{transform:translateY(-4px)!important;box-shadow:0 8px 30px rgba(0,0,0,.1)!important}
+.medo-tpl .mt-pf-icon{width:44px!important;height:44px!important;margin-bottom:14px!important;color:#0071e3!important;background:rgba(0,113,227,.1)!important;border-radius:12px!important;display:flex!important;align-items:center!important;justify-content:center!important}
+.medo-tpl .mt-pf-icon svg{width:24px!important;height:24px!important;stroke:currentColor!important;fill:none!important;stroke-width:1.5!important;stroke-linecap:round!important;stroke-linejoin:round!important}
+.medo-tpl .mt-pf h4{font-family:Georgia,'Times New Roman','Noto Serif',serif!important;font-size:19px!important;font-weight:700!important;color:#1d1d1f!important;letter-spacing:-.2px!important;margin-bottom:8px!important}
+.medo-tpl .mt-pf p{font-size:15px!important;color:#707070!important;line-height:1.5!important;letter-spacing:-.04px!important}
+
+/* ========== STEPS ========== */
+.medo-tpl .mt-steps{margin:0 auto!important}
+.medo-tpl .mt-step{display:flex!important;align-items:flex-start!important;gap:16px!important;padding:24px!important;background:#f5f5f7!important;border-radius:20px!important;margin-bottom:12px!important;transition:transform .3s ease,box-shadow .3s ease!important}
+.medo-tpl .mt-step:hover{transform:translateY(-2px)!important;box-shadow:0 4px 16px rgba(0,0,0,.06)!important}
+.medo-tpl .mt-step-n{width:32px!important;height:32px!important;min-width:32px!important;border-radius:999px!important;background:#0071e3!important;color:#fff!important;display:flex!important;align-items:center!important;justify-content:center!important;font-size:15px!important;font-weight:600!important;flex-shrink:0!important}
+.medo-tpl .mt-step-body h4{font-size:17px!important;font-weight:600!important;color:#1d1d1f!important;letter-spacing:-.1px!important;margin-bottom:6px!important}
+.medo-tpl .mt-step-body p{font-size:15px!important;color:#707070!important;line-height:1.5!important;letter-spacing:-.04px!important}
+
+/* ========== PROMPT BOX ========== */
+.medo-tpl .mt-prompt-box{margin:32px auto 0!important;text-align:center!important}
+.medo-tpl .mt-prompt{background:#f5f5f7!important;border-radius:20px!important;padding:24px 28px!important;margin-bottom:20px!important;border-left:4px solid #0071e3!important;text-align:left!important}
+.medo-tpl .mt-prompt-label{font-size:12px!important;font-weight:600!important;color:#0071e3!important;margin-bottom:8px!important;text-transform:uppercase!important;letter-spacing:.5px!important}
+.medo-tpl .mt-prompt-text{font-size:17px!important;color:#1d1d1f!important;font-style:italic!important;line-height:1.47!important;letter-spacing:-.1px!important}
+
+/* ========== SHOWCASE ========== */
+.medo-tpl .mt-showcase{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:20px!important}
+.medo-tpl .mt-scard{background:#f5f5f7!important;border-radius:28px!important;overflow:hidden!important;transition:transform .3s ease,box-shadow .3s ease!important;display:block!important}
+.medo-tpl .mt-scard:hover{transform:translateY(-4px)!important;box-shadow:0 8px 30px rgba(0,0,0,.1)!important}
+.medo-tpl .mt-scard-img{aspect-ratio:16/9!important;background:#eee!important;overflow:hidden!important}
+.medo-tpl .mt-scard-img img{width:100%!important;height:100%!important;object-fit:cover!important;transition:transform .4s ease!important}
+.medo-tpl .mt-scard:hover .mt-scard-img img{transform:scale(1.03)!important}
+.medo-tpl .mt-scard-body{padding:16px 24px 6px!important}
+.medo-tpl .mt-scard-body h4{font-size:17px!important;font-weight:600!important;color:#1d1d1f!important;letter-spacing:-.1px!important;margin-bottom:4px!important}
+.medo-tpl .mt-scard-body p{font-size:14px!important;color:#707070!important;letter-spacing:-.04px!important;line-height:1.43!important;display:-webkit-box!important;-webkit-line-clamp:2!important;-webkit-box-orient:vertical!important;overflow:hidden!important}
+.medo-tpl .mt-scard-meta{padding:6px 24px 16px!important;display:flex!important;gap:14px!important;font-size:12px!important;color:#707070!important}
+.medo-tpl .mt-scard-meta span{display:flex!important;align-items:center!important;gap:4px!important}
+
+/* ========== FAQ ========== */
+.medo-tpl .mt-faq{max-width:800px!important;margin:0 auto!important}
+.medo-tpl .mt-faq details{background:#f5f5f7!important;border-radius:16px!important;margin-bottom:8px!important;overflow:hidden!important}
+.medo-tpl .mt-faq summary{padding:18px 24px!important;font-size:17px!important;font-weight:600!important;color:#1d1d1f!important;letter-spacing:-.1px!important;cursor:pointer!important;list-style:none!important;display:flex!important;align-items:center!important;justify-content:space-between!important;transition:background .2s ease!important}
+.medo-tpl .mt-faq summary::-webkit-details-marker{display:none!important}
+.medo-tpl .mt-faq summary::after{content:"+"!important;font-size:20px!important;font-weight:300!important;color:#707070!important;transition:transform .2s ease!important;flex-shrink:0!important;margin-left:16px!important}
+.medo-tpl .mt-faq details[open] summary::after{content:"\2212"!important}
+.medo-tpl .mt-faq details[open] summary{background:rgba(0,113,227,.04)!important}
+.medo-tpl .mt-faq .mt-faq-body{padding:0 24px 20px!important;font-size:15px!important;color:#707070!important;line-height:1.6!important;letter-spacing:-.04px!important}
+
+/* ========== CTA BOX ========== */
+.medo-tpl .mt-cta-box{text-align:center!important;padding:80px 32px!important;background:linear-gradient(135deg,#1d1d1f 0%,#2d2d3f 100%)!important;border-radius:28px!important;margin-bottom:80px!important}
+.medo-tpl .mt-cta-box h3{font-family:Georgia,'Times New Roman','Noto Serif',serif!important;font-size:32px!important;font-weight:700!important;line-height:1.2!important;letter-spacing:-.5px!important;margin-bottom:12px!important;color:#fff!important}
+.medo-tpl .mt-cta-box p{color:rgba(255,255,255,.7)!important;font-size:17px!important;letter-spacing:-.1px!important;margin-bottom:24px!important}
+.medo-tpl .mt-cta-box .mt-cta{animation:mt-glow 3s ease-in-out infinite!important}
+.medo-tpl .mt-cta-box .mt-cta:hover{animation:none!important}
+
+/* ========== RELATED ========== */
+.medo-tpl .mt-related{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:20px!important}
+.medo-tpl .mt-rcard{background:#f5f5f7!important;border-radius:28px!important;overflow:hidden!important;transition:transform .3s ease,box-shadow .3s ease!important;display:block!important}
+.medo-tpl .mt-rcard:hover{transform:translateY(-4px)!important;box-shadow:0 8px 30px rgba(0,0,0,.1)!important}
+.medo-tpl .mt-rcard-img{aspect-ratio:16/9!important;background:#eee!important;overflow:hidden!important}
+.medo-tpl .mt-rcard-img img{width:100%!important;height:100%!important;object-fit:cover!important;transition:transform .4s ease!important}
+.medo-tpl .mt-rcard:hover .mt-rcard-img img{transform:scale(1.03)!important}
+.medo-tpl .mt-rcard-body{padding:16px 24px!important}
+.medo-tpl .mt-rcard-body h4{font-size:17px!important;font-weight:600!important;color:#1d1d1f!important;letter-spacing:-.1px!important;margin-bottom:4px!important}
+.medo-tpl .mt-rcard-body p{font-size:14px!important;color:#707070!important}
+
+/* ========== FOOTER ========== */
+.medo-tpl .mt-footer{padding:40px 0 32px!important;text-align:center!important;color:#707070!important;font-size:14px!important;letter-spacing:-.04px!important}
+.medo-tpl .mt-footer-nav{display:flex!important;flex-wrap:wrap!important;justify-content:center!important;gap:8px!important;margin-bottom:20px!important}
+.medo-tpl .mt-footer-nav a{display:inline-block!important;font-size:13px!important;color:#707070!important;background:#f5f5f7!important;padding:6px 14px!important;border-radius:999px!important;transition:background .2s ease,color .2s ease!important}
+.medo-tpl .mt-footer-nav a:hover{background:rgba(0,113,227,.1)!important;color:#0071e3!important}
+.medo-tpl .mt-footer a{color:#0066cc!important}
+
+/* ========== MOBILE ========== */
+@media(max-width:768px){
+  .medo-tpl{width:100vw!important;margin-left:-50vw!important}
+  .medo-tpl .mt-container{padding:0 16px!important}
+  .medo-tpl .mt-hero{padding:40px 0 28px!important}
+  .medo-tpl .mt-hero-badge{font-size:11px!important;padding:5px 12px!important}
+  .medo-tpl .mt-hero h2{font-size:28px!important;letter-spacing:-.4px!important;line-height:1.15!important}
+  .medo-tpl .mt-hero-desc{font-size:16px!important;font-weight:400!important;line-height:1.47!important;margin-bottom:24px!important}
+  .medo-tpl .mt-cta{font-size:15px!important;padding:10px 20px!important}
+  .medo-tpl .mt-screenshot-inline{border-radius:12px!important;margin-bottom:16px!important}
+  .medo-tpl .mt-split{grid-template-columns:1fr!important;gap:24px!important;margin-bottom:40px!important}
+  .medo-tpl .mt-split-sticky{position:static!important}
+  .medo-tpl .mt-split-left h3{font-size:22px!important;letter-spacing:-.3px!important;margin-bottom:10px!important}
+  .medo-tpl .mt-split-left>p{font-size:15px!important}
+  .medo-tpl .mt-try-btn{padding:12px 28px!important;font-size:16px!important;border-radius:12px!important}
+  .medo-tpl .mt-section{margin-bottom:40px!important}
+  .medo-tpl .mt-section-header{margin-bottom:24px!important}
+  .medo-tpl .mt-section-header h3{font-size:22px!important;letter-spacing:-.3px!important}
+  .medo-tpl .mt-section-header p{font-size:15px!important}
+  .medo-tpl .mt-features{grid-template-columns:1fr!important;gap:8px!important}
+  .medo-tpl .mt-feat{padding:18px!important;border-radius:16px!important}
+  .medo-tpl .mt-feat-icon{width:36px!important;height:36px!important;margin-bottom:10px!important;border-radius:10px!important}
+  .medo-tpl .mt-feat-icon svg{width:20px!important;height:20px!important}
+  .medo-tpl .mt-feat h4{font-size:15px!important}
+  .medo-tpl .mt-feat p{font-size:14px!important}
+  .medo-tpl .mt-pf-grid{grid-template-columns:1fr!important;gap:10px!important}
+  .medo-tpl .mt-pf{padding:20px!important;border-radius:16px!important}
+  .medo-tpl .mt-pf-icon{width:36px!important;height:36px!important;margin-bottom:10px!important;border-radius:10px!important}
+  .medo-tpl .mt-pf-icon svg{width:20px!important;height:20px!important}
+  .medo-tpl .mt-pf h4{font-size:17px!important}
+  .medo-tpl .mt-pf p{font-size:14px!important}
+  .medo-tpl .mt-step{padding:18px!important;border-radius:16px!important;margin-bottom:8px!important;gap:12px!important}
+  .medo-tpl .mt-step-n{width:28px!important;height:28px!important;min-width:28px!important;font-size:13px!important}
+  .medo-tpl .mt-step-body h4{font-size:15px!important}
+  .medo-tpl .mt-step-body p{font-size:14px!important}
+  .medo-tpl .mt-prompt{padding:20px!important;border-radius:16px!important}
+  .medo-tpl .mt-prompt-text{font-size:15px!important}
+  .medo-tpl .mt-showcase{grid-template-columns:1fr!important;gap:12px!important}
+  .medo-tpl .mt-scard{border-radius:16px!important}
+  .medo-tpl .mt-scard-body h4{font-size:15px!important}
+  .medo-tpl .mt-scard-body p{font-size:13px!important}
+  .medo-tpl .mt-cta-box{padding:40px 20px!important;border-radius:16px!important;margin-bottom:40px!important}
+  .medo-tpl .mt-cta-box h3{font-size:22px!important;letter-spacing:-.3px!important}
+  .medo-tpl .mt-cta-box p{font-size:15px!important}
+  .medo-tpl .mt-related{grid-template-columns:1fr!important;gap:12px!important}
+  .medo-tpl .mt-rcard{border-radius:16px!important}
+  .medo-tpl .mt-rcard-body h4{font-size:15px!important}
+  .medo-tpl .mt-faq details{border-radius:12px!important;margin-bottom:6px!important}
+  .medo-tpl .mt-faq summary{padding:14px 18px!important;font-size:15px!important}
+  .medo-tpl .mt-faq .mt-faq-body{padding:0 18px 16px!important;font-size:14px!important}
+  .medo-tpl .mt-footer-nav{gap:6px!important;margin-bottom:16px!important}
+  .medo-tpl .mt-footer-nav a{font-size:12px!important;padding:5px 12px!important}
+  .medo-tpl .mt-footer{font-size:12px!important}
+}
+
+/* ========== TABLET ========== */
+@media(min-width:769px) and (max-width:1024px){
+  .medo-tpl .mt-container{padding:0 32px!important}
+  .medo-tpl .mt-hero h2{font-size:36px!important;letter-spacing:-.6px!important}
+  .medo-tpl .mt-hero-desc{font-size:18px!important}
+  .medo-tpl .mt-split{gap:32px!important}
+  .medo-tpl .mt-split-left h3{font-size:28px!important;letter-spacing:-.4px!important}
+  .medo-tpl .mt-section-header h3{font-size:28px!important;letter-spacing:-.4px!important}
+  .medo-tpl .mt-pf-grid{grid-template-columns:repeat(2,1fr)!important}
+  .medo-tpl .mt-showcase{grid-template-columns:repeat(2,1fr)!important}
+  .medo-tpl .mt-related{grid-template-columns:repeat(2,1fr)!important}
+}
+</style>
+
+<div class="medo-tpl">
+<div class="mt-container">
+
+  <!-- ===== FEATURES ===== -->
+  <div class="mt-split">
+    <div class="mt-split-left mt-split-sticky">
+      <div class="mt-screenshot-inline">
+        <img src="https://miaoda-screenshot-img.s3cdn.medo.dev/preview_screen/app-9y0vsccu1og1/app-9y0vsccu1og1_1774872288992_ebe3.png" alt="Developer CV app screenshot — portfolio website with project showcase and skills display" width="1100" height="619" loading="lazy">
+      </div>
+      <h3>Everything You Need to Showcase Your Work</h3>
+      <p>Project showcase, skills display, experience timeline, and responsive design — build a professional portfolio that gets you noticed.</p>
+      <div class="mt-try-wrap">
+        <a href="https://medo.dev/apps/app-9y0vsccu1og1" target="_blank" rel="noopener" class="mt-try-btn">Try it free &#x2192;</a>
+        <div class="mt-trust">Free to start · No coding · Deploy in seconds</div>
+      </div>
+    </div>
+    <div class="mt-split-right">
+      <div class="mt-features">
+      <div class="mt-feat">
+        <div class="mt-feat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg></div>
+        <h4>Project Showcase</h4>
+        <p>Display your best work with image galleries, live demo links, and detailed descriptions. Organize projects by category, technology, or date.</p>
+      </div>
+      <div class="mt-feat">
+        <div class="mt-feat-icon"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg></div>
+        <h4>Skills Display</h4>
+        <p>Visualize your technical skills with progress bars, charts, or tag clouds. Group by category — languages, frameworks, tools, and soft skills.</p>
+      </div>
+      <div class="mt-feat">
+        <div class="mt-feat-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h4>Experience Timeline</h4>
+        <p>Present your career journey with an interactive timeline. Highlight roles, achievements, and key milestones in a visually engaging format.</p>
+      </div>
+      <div class="mt-feat">
+        <div class="mt-feat-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2Z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+        <h4>Contact Form</h4>
+        <p>Built-in contact form so recruiters and clients can reach you directly. Clean design with validation and a professional submission flow.</p>
+      </div>
+      <div class="mt-feat">
+        <div class="mt-feat-icon"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div>
+        <h4>Resume Download</h4>
+        <p>Let visitors download your resume as a PDF with a single click. Keep your latest CV accessible alongside your portfolio projects.</p>
+      </div>
+      <div class="mt-feat">
+        <div class="mt-feat-icon"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><path d="M12 18h.01"/></svg></div>
+        <h4>Responsive Design</h4>
+        <p>Your portfolio looks stunning on every device. Optimized layouts for desktop, tablet, and mobile ensure a seamless viewing experience.</p>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <!-- ===== PERFECT FOR ===== -->
+  <div class="mt-section">
+    <div class="mt-section-header">
+      <h3>Perfect For</h3>
+      <p>Whether you&#x27;re job hunting, freelancing, or building your personal brand.</p>
+    </div>
+    <div class="mt-pf-grid">
+      <div class="mt-pf">
+        <div class="mt-pf-icon"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+        <h4>Developers</h4>
+        <p>Showcase your GitHub projects, open-source contributions, and technical skills. Add live demo links and code snippets to impress technical recruiters.</p>
+      </div>
+      <div class="mt-pf">
+        <div class="mt-pf-icon"><svg viewBox="0 0 24 24"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></div>
+        <h4>Designers</h4>
+        <p>Present your design work with high-quality image galleries and case studies. Show your process from wireframes to polished UI with visual storytelling.</p>
+      </div>
+      <div class="mt-pf">
+        <div class="mt-pf-icon"><svg viewBox="0 0 24 24"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg></div>
+        <h4>Freelancers</h4>
+        <p>Win more clients with a professional portfolio that highlights your services, past work, and testimonials. Add a contact form to capture leads directly.</p>
+      </div>
+      <div class="mt-pf">
+        <div class="mt-pf-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></div>
+        <h4>Job Seekers</h4>
+        <p>Stand out in the job market with a personal portfolio that goes beyond a traditional resume. Show employers what you can do, not just what you&#x27;ve listed.</p>
+      </div>
+      <div class="mt-pf">
+        <div class="mt-pf-icon"><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 6 3 6 3s6-1 6-3v-5"/></svg></div>
+        <h4>Students</h4>
+        <p>Build your first portfolio to showcase class projects, hackathon entries, and internship work. Start establishing your professional presence early.</p>
+      </div>
+      <div class="mt-pf">
+        <div class="mt-pf-icon"><svg viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></div>
+        <h4>Creative Professionals</h4>
+        <p>Photographers, writers, musicians, and artists — display your creative work in a beautiful, modern format that lets your talent speak for itself.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <div class="mt-section">
+    <div class="mt-section-header">
+      <h3>Start in 3 Steps</h3>
+      <p>From idea to live portfolio in minutes.</p>
+    </div>
+    <div class="mt-steps">
+      <div class="mt-step">
+        <span class="mt-step-n">1</span>
+        <div class="mt-step-body">
+          <h4>Open MeDo and Start Building</h4>
+          <p>Click the button below. MeDo&#x27;s AI loads this template&#x27;s prompt and generates your portfolio website in minutes. No sign-up needed to start.</p>
+        </div>
+      </div>
+      <div class="mt-step">
+        <span class="mt-step-n">2</span>
+        <div class="mt-step-body">
+          <h4>Add Your Projects and Skills</h4>
+          <p>Upload project screenshots, add descriptions, and list your skills. The AI organizes everything into a polished portfolio layout automatically.</p>
+        </div>
+      </div>
+      <div class="mt-step">
+        <span class="mt-step-n">3</span>
+        <div class="mt-step-body">
+          <h4>Customize and Share</h4>
+          <p>Adjust the design, reorder sections, and add your personal touch. Deploy as a web app or share a link — MeDo handles hosting, accessible from any device.</p>
+        </div>
+      </div>
+    </div>
+    <div class="mt-prompt-box">
+      <div class="mt-prompt">
+        <div class="mt-prompt-label">Recommended Prompt</div>
+        <div class="mt-prompt-text">"Create a portfolio website with project showcase, skills section, experience timeline, contact form, and downloadable resume"</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CTA BOX ===== -->
+  <div class="mt-cta-box">
+    <h3>Ready to Build Your Portfolio Website?</h3>
+    <p>No coding required. Describe what you want, and MeDo's AI builds it for you.</p>
+    <a href="https://medo.dev/?prompt=Create%20a%20portfolio%20website%20with%20project%20showcase%2C%20skills%20section%2C%20experience%20timeline%2C%20contact%20form%2C%20and%20downloadable%20resume" class="mt-cta">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      Create this with MeDo — It's Free
+    </a>
+  </div>
+
+  <!-- ===== RELATED ===== -->
+  <div class="mt-section">
+    <div class="mt-section-header">
+      <h3>Related Templates</h3>
+    </div>
+    <div class="mt-related">
+      <a href="https://medo.dev/apps/app-90zxwl5r6oe9" class="mt-rcard">
+        <div class="mt-rcard-img">
+          <img src="https://miaoda-edit-image.s3cdn.medo.dev/90zxwl5r6oe9/IMG-91hsmopi794w.png" alt="Todo List Management System template" loading="lazy">
+        </div>
+        <div class="mt-rcard-body">
+          <h4>Todo List Management System</h4>
+          <p>Productivity</p>
+        </div>
+      </a>
+      <a href="https://medo.dev/apps/app-7r1do0fd2l1d" class="mt-rcard">
+        <div class="mt-rcard-img">
+          <img src="https://miaoda-edit-image.s3cdn.medo.dev/7r1do0fd2l1d/IMG-7r26ecempwqo.png" alt="AI Study Companion template" loading="lazy">
+        </div>
+        <div class="mt-rcard-body">
+          <h4>AI Study Companion</h4>
+          <p>Education</p>
+        </div>
+      </a>
+      <a href="https://medo.dev/apps/app-8q7vkvuq2g3l" class="mt-rcard">
+        <div class="mt-rcard-img">
+          <img src="https://miaoda-screenshot-img.s3cdn.medo.dev/preview_screen/app-8q7vkvuq2g3l/app-8q7vkvuq2g3l_1767628673162_402d.png" alt="SCREP | ZEN Fashion template" loading="lazy">
+        </div>
+        <div class="mt-rcard-body">
+          <h4>SCREP | ZEN Fashion</h4>
+          <p>E-commerce</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- ===== SHOWCASE ===== -->
+  <div class="mt-section">
+    <div class="mt-section-header">
+      <h3>Built with MeDo</h3>
+      <p>Real apps created by MeDo users — see what's possible.</p>
+    </div>
+    <div class="mt-showcase">
+      <a href="https://medo.dev/apps/app-91zelyvq8hdt" class="mt-scard">
+        <div class="mt-scard-img">
+          <img src="https://miaoda-edit-image.s3cdn.medo.dev/91zelyvq8hdt/IMG-922v96y3w8w0.png" alt="Production Landing Page — responsive dark-mode website built with MeDo" loading="lazy" width="400" height="225">
+        </div>
+        <div class="mt-scard-body">
+          <h4>Production Landing Page</h4>
+          <p>Production-ready responsive landing page with dark-mode glassmorphism design</p>
+        </div>
+        <div class="mt-scard-meta">
+          <span>3.4K views</span>
+          <span>399 likes</span>
+        </div>
+      </a>
+      <a href="https://medo.dev/apps/app-922y48c7nr41" class="mt-scard">
+        <div class="mt-scard-img">
+          <img src="https://miaoda-edit-image.s3cdn.medo.dev/922y48c7nr41/IMG-9j1hinsviyv4.png" alt="The Jurassic Park Portfolio — 3D scroll animation portfolio built with MeDo" loading="lazy" width="400" height="225">
+        </div>
+        <div class="mt-scard-body">
+          <h4>The Jurassic Park Portfolio</h4>
+          <p>Premium portfolio with 3D card stack scroll animation</p>
+        </div>
+        <div class="mt-scard-meta">
+          <span>757 views</span>
+          <span>262 likes</span>
+        </div>
+      </a>
+      <a href="https://medo.dev/apps/app-851u7fqm9kw1" class="mt-scard">
+        <div class="mt-scard-img">
+          <img src="https://miaoda-edit-image.s3cdn.medo.dev/851u7fqm9kw1/IMG-86eklr22zocg.png" alt="Care Bond — community support platform built with MeDo" loading="lazy" width="400" height="225">
+        </div>
+        <div class="mt-scard-body">
+          <h4>Care Bond</h4>
+          <p>Community platform for compassion, support, and sustainable programs</p>
+        </div>
+        <div class="mt-scard-meta">
+          <span>709 views</span>
+          <span>351 likes</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- ===== FAQ ===== -->
+  <div class="mt-section">
+    <div class="mt-section-header">
+      <h3>Frequently Asked Questions</h3>
+    </div>
+    <div class="mt-faq">
+      <details>
+        <summary>Is the Portfolio Website template free to use?</summary>
+        <div class="mt-faq-body">Yes. You can start building with this template for free on MeDo — no credit card or coding skills required. MeDo handles hosting and deployment automatically, so there are no server costs to get started.</div>
+      </details>
+      <details>
+        <summary>Can I customize the portfolio design and layout?</summary>
+        <div class="mt-faq-body">Absolutely. The template is fully customizable through MeDo's AI conversation interface. You can adjust the color scheme, typography, section order, project layout, and overall design to match your personal brand.</div>
+      </details>
+      <details>
+        <summary>Is the portfolio website mobile-friendly?</summary>
+        <div class="mt-faq-body">Yes. Every portfolio built with this template is fully responsive out of the box. It adapts seamlessly to desktop, tablet, and mobile screens so recruiters and clients can view your work on any device.</div>
+      </details>
+      <details>
+        <summary>Can I host the portfolio on my own domain?</summary>
+        <div class="mt-faq-body">MeDo provides instant hosting with a shareable link for your portfolio. For custom domain setup, you can export the generated code and deploy it to your preferred hosting provider, or use MeDo's built-in hosting for a hassle-free experience.</div>
+      </details>
+    </div>
+  </div>
+
+  <div class="mt-footer">
+    <div class="mt-footer-nav">
+      <a href="https://medo.dev/marketplace/education">Education</a>
+      <a href="https://medo.dev/marketplace/website">Website</a>
+      <a href="https://medo.dev/marketplace/marketing">Marketing</a>
+      <a href="https://medo.dev/marketplace/productivity">Productivity</a>
+      <a href="https://medo.dev/marketplace/e-commerce">E-commerce</a>
+      <a href="https://medo.dev/marketplace/tools">Tools</a>
+      <a href="https://medo.dev/marketplace/games">Games</a>
+      <a href="https://medo.dev/marketplace/survey">Survey</a>
+      <a href="https://medo.dev/marketplace/research">Research</a>
+    </div>
+    <p>&copy; 2026 <a href="https://medo.dev">MeDo</a>. Build any app with AI — no coding required.</p>
+  </div>
+
+</div>
+</div>

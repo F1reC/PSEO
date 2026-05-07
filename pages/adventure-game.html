@@ -1,0 +1,535 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Adventure Game",
+      "description": "Build an immersive adventure game with open world exploration, combat system, character progression, quest storylines, pixel art graphics, and inventory management — all powered by AI.",
+      "applicationCategory": "Games",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "MeDo",
+        "url": "https://medo.dev"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "MeDo", "item": "https://medo.dev"},
+        {"@type": "ListItem", "position": 2, "name": "Games", "item": "https://medo.dev/marketplace/games"},
+        {"@type": "ListItem", "position": 3, "name": "Adventure Game"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is the Adventure Game template free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. You can start building your adventure game for free on MeDo. No credit card or coding skills required — MeDo handles hosting and deployment automatically."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I customize the game world and storyline?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. The template is fully customizable through MeDo's AI conversation interface. You can design your own world map, create unique characters, write quest storylines, adjust combat mechanics, and build the exact adventure you envision."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need coding experience to build an adventure game?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No coding experience needed. MeDo's AI handles all the programming. Just describe what you want — characters, quests, combat mechanics, world design — and the AI generates a fully playable adventure game for you."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I publish and share my adventure game?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Once you're happy with your game, you can deploy it as a web app with one click. MeDo handles hosting, so you can share a link with anyone — players can enjoy your game from any browser on any device."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+/* ========== GHOST WRAPPER RESET ========== */
+.kg-html-card,.kg-card,.gh-content .kg-html-card{background:transparent!important;border:none!important;box-shadow:none!important;border-radius:0!important;padding:0!important;margin-left:0!important;margin-right:0!important;max-width:none!important}
+/* ========== RESET ========== */
+.medo-tpl,.medo-tpl *,.medo-tpl *::before,.medo-tpl *::after{box-sizing:border-box!important;margin:0!important;padding:0!important;border:none!important;text-decoration:none!important;list-style:none!important;outline:none!important;box-shadow:none!important;float:none!important;background:transparent!important}
+.medo-tpl{font-family:'SF Pro Text',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif!important;color:#1d1d1f!important;line-height:1.47!important;-webkit-font-smoothing:antialiased!important;width:calc(100vw - 200px)!important;position:relative!important;left:50%!important;margin-left:calc(-50vw + 100px)!important;overflow:hidden!important}
+.medo-tpl a{color:inherit!important;text-decoration:none!important}
+.medo-tpl a:hover{text-decoration:none!important}
+.medo-tpl img{max-width:100%!important;height:auto!important;display:block!important;border:none!important}
+.medo-tpl ul{list-style:none!important;margin:0!important;padding:0!important}
+.medo-tpl li{margin:0!important;padding:0!important}
+.medo-tpl li::marker{content:""!important;display:none!important}
+.medo-tpl p{margin:0!important;padding:0!important}
+.medo-tpl h2,.medo-tpl h3,.medo-tpl h4{margin:0!important;padding:0!important}
+.medo-tpl svg{background:transparent!important}
+
+.medo-tpl .mt-container{max-width:1440px!important;margin:0 auto!important;padding:0 40px!important}
+
+/* ========== KEYFRAMES ========== */
+@keyframes mt-glow{0%,100%{box-shadow:0 4px 20px rgba(0,113,227,.35)!important}50%{box-shadow:0 4px 32px rgba(0,113,227,.55)!important}}
+
+/* ========== HERO ========== */
+.medo-tpl .mt-hero{text-align:center!important;padding:80px 0 48px!important}
+.medo-tpl .mt-hero-badge{display:inline-block!important;font-size:13px!important;font-weight:600!important;color:#0071e3!important;text-transform:uppercase!important;letter-spacing:1px!important;margin-bottom:16px!important;background:rgba(0,113,227,.08)!important;padding:6px 16px!important;border-radius:999px!important}
+.medo-tpl .mt-hero h2{font-family:Georgia,'Times New Roman','Noto Serif',serif!important;font-size:48px!important;font-weight:700!important;line-height:1.1!important;letter-spacing:-.8px!important;color:#1d1d1f!important;margin-bottom:20px!important}
+.medo-tpl .mt-hero-desc{font-size:20px!important;font-weight:300!important;color:#474747!important;letter-spacing:-.2px!important;line-height:1.4!important;max-width:720px!important;margin:0 auto 32px!important}
+.medo-tpl .mt-cta{display:inline-flex!important;align-items:center!important;gap:8px!important;background:#0071e3!important;color:#fff!important;padding:12px 24px!important;border-radius:999px!important;font-size:17px!important;font-weight:400!important;letter-spacing:-.1px!important;transition:background .3s ease,transform .2s ease!important;cursor:pointer!important;text-decoration:none!important}
+.medo-tpl .mt-cta:hover{background:#0077ed!important;color:#fff!important;text-decoration:none!important;transform:translateY(-1px)!important}
+.medo-tpl .mt-cta svg{width:18px!important;height:18px!important;flex-shrink:0!important}
+
+/* ========== SCREENSHOT ========== */
+.medo-tpl .mt-screenshot-inline{border-radius:20px!important;overflow:hidden!important;margin-bottom:20px!important;box-shadow:0 8px 40px rgba(0,0,0,.12),0 2px 8px rgba(0,0,0,.06)!important}
+.medo-tpl .mt-screenshot-inline img{width:100%!important;display:block!important}
+
+/* ========== SPLIT LAYOUT ========== */
+.medo-tpl .mt-split{display:grid!important;grid-template-columns:2fr 3fr!important;gap:48px!important;align-items:start!important;margin-bottom:80px!important}
+.medo-tpl .mt-split-left,.medo-tpl .mt-split-right{background:transparent!important}
+.medo-tpl .mt-split-left h3{font-family:Georgia,'Times New Roman','Noto Serif',serif!important;font-size:32px!important;font-weight:700!important;line-height:1.2!important;letter-spacing:-.5px!important;color:#1d1d1f!important;margin-bottom:12px!important}
+.medo-tpl .mt-split-left>p{font-size:17px!important;color:#707070!important;letter-spacing:-.1px!important;line-height:1.47!important;margin-bottom:20px!important}
+.medo-tpl .mt-split-sticky{position:sticky!important;top:32px!important}
+.medo-tpl .mt-try-wrap{text-align:center!important;margin-top:28px!important;display:block!important}
+.medo-tpl .mt-try-btn{display:inline-flex!important;align-items:center!important;gap:8px!important;background:linear-gradient(135deg,#0071e3 0%,#005bb5 100%)!important;color:#fff!important;padding:14px 32px!important;border-radius:14px!important;font-size:17px!important;font-weight:600!important;letter-spacing:-.1px!important;cursor:pointer!important;text-decoration:none!important;transition:transform .2s ease,box-shadow .3s ease!important;box-shadow:0 2px 12px rgba(0,113,227,.3)!important}
+.medo-tpl .mt-try-btn:hover{background:linear-gradient(135deg,#0077ed 0%,#0062c4 100%)!important;color:#fff!important;text-decoration:none!important;transform:translateY(-2px)!important;box-shadow:0 4px 20px rgba(0,113,227,.4)!important}
+.medo-tpl .mt-trust{font-size:13px!important;color:#999!important;margin-top:14px!important;letter-spacing:-.02px!important}
+
+/* ========== SECTIONS ========== */
+.medo-tpl .mt-section{margin-bottom:80px!important}
+.medo-tpl .mt-section-header{text-align:center!important;margin-bottom:40px!important}
+.medo-tpl .mt-section-header h3{font-family:Georgia,'Times New Roman','Noto Serif',serif!important;font-size:32px!important;font-weight:700!important;line-height:1.2!important;letter-spacing:-.5px!important;color:#1d1d1f!important;margin-bottom:8px!important}
+.medo-tpl .mt-section-header p{font-size:17px!important;color:#707070!important;letter-spacing:-.1px!important;line-height:1.47!important;max-width:600px!important;margin:0 auto!important}
+
+/* ========== FEATURE CARDS ========== */
+.medo-tpl .mt-features{display:grid!important;grid-template-columns:repeat(2,1fr)!important;gap:14px!important}
+.medo-tpl .mt-feat{padding:24px!important;background:#f5f5f7!important;border-radius:20px!important;transition:transform .3s ease,box-shadow .3s ease!important}
+.medo-tpl .mt-feat:hover{transform:translateY(-4px)!important;box-shadow:0 8px 30px rgba(0,0,0,.08)!important}
+.medo-tpl .mt-feat-icon{width:44px!important;height:44px!important;margin-bottom:12px!important;color:#0071e3!important;background:rgba(0,113,227,.1)!important;border-radius:12px!important;display:flex!important;align-items:center!important;justify-content:center!important}
+.medo-tpl .mt-feat-icon svg{width:24px!important;height:24px!important;stroke:currentColor!important;fill:none!important;stroke-width:1.5!important;stroke-linecap:round!important;stroke-linejoin:round!important}
+.medo-tpl .mt-feat h4{font-size:17px!important;font-weight:600!important;color:#1d1d1f!important;letter-spacing:-.1px!important;margin-bottom:6px!important}
+.medo-tpl .mt-feat p{font-size:15px!important;color:#707070!important;line-height:1.47!important;letter-spacing:-.04px!important}
+
+/* ========== PERFECT FOR ========== */
+.medo-tpl .mt-pf-grid{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:16px!important}
+.medo-tpl .mt-pf{padding:28px!important;background:#fff!important;border-radius:20px!important;transition:transform .3s ease,box-shadow .3s ease!important;box-shadow:0 1px 4px rgba(0,0,0,.06),0 0 0 1px rgba(0,0,0,.04)!important}
+.medo-tpl .mt-pf:hover{transform:translateY(-4px)!important;box-shadow:0 8px 30px rgba(0,0,0,.1)!important}
+.medo-tpl .mt-pf-icon{width:44px!important;height:44px!important;margin-bottom:14px!important;color:#0071e3!important;background:rgba(0,113,227,.1)!important;border-radius:12px!important;display:flex!important;align-items:center!important;justify-content:center!important}
+.medo-tpl .mt-pf-icon svg{width:24px!important;height:24px!important;stroke:currentColor!important;fill:none!important;stroke-width:1.5!important;stroke-linecap:round!important;stroke-linejoin:round!important}
+.medo-tpl .mt-pf h4{font-family:Georgia,'Times New Roman','Noto Serif',serif!important;font-size:19px!important;font-weight:700!important;color:#1d1d1f!important;letter-spacing:-.2px!important;margin-bottom:8px!important}
+.medo-tpl .mt-pf p{font-size:15px!important;color:#707070!important;line-height:1.5!important;letter-spacing:-.04px!important}
+
+/* ========== STEPS ========== */
+.medo-tpl .mt-steps{margin:0 auto!important}
+.medo-tpl .mt-step{display:flex!important;align-items:flex-start!important;gap:16px!important;padding:24px!important;background:#f5f5f7!important;border-radius:20px!important;margin-bottom:12px!important;transition:transform .3s ease,box-shadow .3s ease!important}
+.medo-tpl .mt-step:hover{transform:translateY(-2px)!important;box-shadow:0 4px 16px rgba(0,0,0,.06)!important}
+.medo-tpl .mt-step-n{width:32px!important;height:32px!important;min-width:32px!important;border-radius:999px!important;background:#0071e3!important;color:#fff!important;display:flex!important;align-items:center!important;justify-content:center!important;font-size:15px!important;font-weight:600!important;flex-shrink:0!important}
+.medo-tpl .mt-step-body h4{font-size:17px!important;font-weight:600!important;color:#1d1d1f!important;letter-spacing:-.1px!important;margin-bottom:6px!important}
+.medo-tpl .mt-step-body p{font-size:15px!important;color:#707070!important;line-height:1.5!important;letter-spacing:-.04px!important}
+
+/* ========== PROMPT BOX ========== */
+.medo-tpl .mt-prompt-box{margin:32px auto 0!important;text-align:center!important}
+.medo-tpl .mt-prompt{background:#f5f5f7!important;border-radius:20px!important;padding:24px 28px!important;margin-bottom:20px!important;border-left:4px solid #0071e3!important;text-align:left!important}
+.medo-tpl .mt-prompt-label{font-size:12px!important;font-weight:600!important;color:#0071e3!important;margin-bottom:8px!important;text-transform:uppercase!important;letter-spacing:.5px!important}
+.medo-tpl .mt-prompt-text{font-size:17px!important;color:#1d1d1f!important;font-style:italic!important;line-height:1.47!important;letter-spacing:-.1px!important}
+
+/* ========== SHOWCASE ========== */
+.medo-tpl .mt-showcase{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:20px!important}
+.medo-tpl .mt-scard{background:#f5f5f7!important;border-radius:28px!important;overflow:hidden!important;transition:transform .3s ease,box-shadow .3s ease!important;display:block!important}
+.medo-tpl .mt-scard:hover{transform:translateY(-4px)!important;box-shadow:0 8px 30px rgba(0,0,0,.1)!important}
+.medo-tpl .mt-scard-img{aspect-ratio:16/9!important;background:#eee!important;overflow:hidden!important}
+.medo-tpl .mt-scard-img img{width:100%!important;height:100%!important;object-fit:cover!important;transition:transform .4s ease!important}
+.medo-tpl .mt-scard:hover .mt-scard-img img{transform:scale(1.03)!important}
+.medo-tpl .mt-scard-body{padding:16px 24px 6px!important}
+.medo-tpl .mt-scard-body h4{font-size:17px!important;font-weight:600!important;color:#1d1d1f!important;letter-spacing:-.1px!important;margin-bottom:4px!important}
+.medo-tpl .mt-scard-body p{font-size:14px!important;color:#707070!important;letter-spacing:-.04px!important;line-height:1.43!important;display:-webkit-box!important;-webkit-line-clamp:2!important;-webkit-box-orient:vertical!important;overflow:hidden!important}
+.medo-tpl .mt-scard-meta{padding:6px 24px 16px!important;display:flex!important;gap:14px!important;font-size:12px!important;color:#707070!important}
+.medo-tpl .mt-scard-meta span{display:flex!important;align-items:center!important;gap:4px!important}
+
+/* ========== FAQ ========== */
+.medo-tpl .mt-faq{max-width:800px!important;margin:0 auto!important}
+.medo-tpl .mt-faq details{background:#f5f5f7!important;border-radius:16px!important;margin-bottom:8px!important;overflow:hidden!important}
+.medo-tpl .mt-faq summary{padding:18px 24px!important;font-size:17px!important;font-weight:600!important;color:#1d1d1f!important;letter-spacing:-.1px!important;cursor:pointer!important;list-style:none!important;display:flex!important;align-items:center!important;justify-content:space-between!important;transition:background .2s ease!important}
+.medo-tpl .mt-faq summary::-webkit-details-marker{display:none!important}
+.medo-tpl .mt-faq summary::after{content:"+"!important;font-size:20px!important;font-weight:300!important;color:#707070!important;transition:transform .2s ease!important;flex-shrink:0!important;margin-left:16px!important}
+.medo-tpl .mt-faq details[open] summary::after{content:"\2212"!important}
+.medo-tpl .mt-faq details[open] summary{background:rgba(0,113,227,.04)!important}
+.medo-tpl .mt-faq .mt-faq-body{padding:0 24px 20px!important;font-size:15px!important;color:#707070!important;line-height:1.6!important;letter-spacing:-.04px!important}
+
+/* ========== CTA BOX ========== */
+.medo-tpl .mt-cta-box{text-align:center!important;padding:80px 32px!important;background:linear-gradient(135deg,#1d1d1f 0%,#2d2d3f 100%)!important;border-radius:28px!important;margin-bottom:80px!important}
+.medo-tpl .mt-cta-box h3{font-family:Georgia,'Times New Roman','Noto Serif',serif!important;font-size:32px!important;font-weight:700!important;line-height:1.2!important;letter-spacing:-.5px!important;margin-bottom:12px!important;color:#fff!important}
+.medo-tpl .mt-cta-box p{color:rgba(255,255,255,.7)!important;font-size:17px!important;letter-spacing:-.1px!important;margin-bottom:24px!important}
+.medo-tpl .mt-cta-box .mt-cta{animation:mt-glow 3s ease-in-out infinite!important}
+.medo-tpl .mt-cta-box .mt-cta:hover{animation:none!important}
+
+/* ========== RELATED ========== */
+.medo-tpl .mt-related{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:20px!important}
+.medo-tpl .mt-rcard{background:#f5f5f7!important;border-radius:28px!important;overflow:hidden!important;transition:transform .3s ease,box-shadow .3s ease!important;display:block!important}
+.medo-tpl .mt-rcard:hover{transform:translateY(-4px)!important;box-shadow:0 8px 30px rgba(0,0,0,.1)!important}
+.medo-tpl .mt-rcard-img{aspect-ratio:16/9!important;background:#eee!important;overflow:hidden!important}
+.medo-tpl .mt-rcard-img img{width:100%!important;height:100%!important;object-fit:cover!important;transition:transform .4s ease!important}
+.medo-tpl .mt-rcard:hover .mt-rcard-img img{transform:scale(1.03)!important}
+.medo-tpl .mt-rcard-body{padding:16px 24px!important}
+.medo-tpl .mt-rcard-body h4{font-size:17px!important;font-weight:600!important;color:#1d1d1f!important;letter-spacing:-.1px!important;margin-bottom:4px!important}
+.medo-tpl .mt-rcard-body p{font-size:14px!important;color:#707070!important}
+
+/* ========== FOOTER ========== */
+.medo-tpl .mt-footer{padding:40px 0 32px!important;text-align:center!important;color:#707070!important;font-size:14px!important;letter-spacing:-.04px!important}
+.medo-tpl .mt-footer-nav{display:flex!important;flex-wrap:wrap!important;justify-content:center!important;gap:8px!important;margin-bottom:20px!important}
+.medo-tpl .mt-footer-nav a{display:inline-block!important;font-size:13px!important;color:#707070!important;background:#f5f5f7!important;padding:6px 14px!important;border-radius:999px!important;transition:background .2s ease,color .2s ease!important}
+.medo-tpl .mt-footer-nav a:hover{background:rgba(0,113,227,.1)!important;color:#0071e3!important}
+.medo-tpl .mt-footer a{color:#0066cc!important}
+
+/* ========== MOBILE ========== */
+@media(max-width:768px){
+  .medo-tpl{width:100vw!important;margin-left:-50vw!important}
+  .medo-tpl .mt-container{padding:0 16px!important}
+  .medo-tpl .mt-hero{padding:40px 0 28px!important}
+  .medo-tpl .mt-hero-badge{font-size:11px!important;padding:5px 12px!important}
+  .medo-tpl .mt-hero h2{font-size:28px!important;letter-spacing:-.4px!important;line-height:1.15!important}
+  .medo-tpl .mt-hero-desc{font-size:16px!important;font-weight:400!important;line-height:1.47!important;margin-bottom:24px!important}
+  .medo-tpl .mt-cta{font-size:15px!important;padding:10px 20px!important}
+  .medo-tpl .mt-screenshot-inline{border-radius:12px!important;margin-bottom:16px!important}
+  .medo-tpl .mt-split{grid-template-columns:1fr!important;gap:24px!important;margin-bottom:40px!important}
+  .medo-tpl .mt-split-sticky{position:static!important}
+  .medo-tpl .mt-split-left h3{font-size:22px!important;letter-spacing:-.3px!important;margin-bottom:10px!important}
+  .medo-tpl .mt-split-left>p{font-size:15px!important}
+  .medo-tpl .mt-try-btn{padding:12px 28px!important;font-size:16px!important;border-radius:12px!important}
+  .medo-tpl .mt-section{margin-bottom:40px!important}
+  .medo-tpl .mt-section-header{margin-bottom:24px!important}
+  .medo-tpl .mt-section-header h3{font-size:22px!important;letter-spacing:-.3px!important}
+  .medo-tpl .mt-section-header p{font-size:15px!important}
+  .medo-tpl .mt-features{grid-template-columns:1fr!important;gap:8px!important}
+  .medo-tpl .mt-feat{padding:18px!important;border-radius:16px!important}
+  .medo-tpl .mt-feat-icon{width:36px!important;height:36px!important;margin-bottom:10px!important;border-radius:10px!important}
+  .medo-tpl .mt-feat-icon svg{width:20px!important;height:20px!important}
+  .medo-tpl .mt-feat h4{font-size:15px!important}
+  .medo-tpl .mt-feat p{font-size:14px!important}
+  .medo-tpl .mt-pf-grid{grid-template-columns:1fr!important;gap:10px!important}
+  .medo-tpl .mt-pf{padding:20px!important;border-radius:16px!important}
+  .medo-tpl .mt-pf-icon{width:36px!important;height:36px!important;margin-bottom:10px!important;border-radius:10px!important}
+  .medo-tpl .mt-pf-icon svg{width:20px!important;height:20px!important}
+  .medo-tpl .mt-pf h4{font-size:17px!important}
+  .medo-tpl .mt-pf p{font-size:14px!important}
+  .medo-tpl .mt-step{padding:18px!important;border-radius:16px!important;margin-bottom:8px!important;gap:12px!important}
+  .medo-tpl .mt-step-n{width:28px!important;height:28px!important;min-width:28px!important;font-size:13px!important}
+  .medo-tpl .mt-step-body h4{font-size:15px!important}
+  .medo-tpl .mt-step-body p{font-size:14px!important}
+  .medo-tpl .mt-prompt{padding:20px!important;border-radius:16px!important}
+  .medo-tpl .mt-prompt-text{font-size:15px!important}
+  .medo-tpl .mt-showcase{grid-template-columns:1fr!important;gap:12px!important}
+  .medo-tpl .mt-scard{border-radius:16px!important}
+  .medo-tpl .mt-scard-body h4{font-size:15px!important}
+  .medo-tpl .mt-scard-body p{font-size:13px!important}
+  .medo-tpl .mt-cta-box{padding:40px 20px!important;border-radius:16px!important;margin-bottom:40px!important}
+  .medo-tpl .mt-cta-box h3{font-size:22px!important;letter-spacing:-.3px!important}
+  .medo-tpl .mt-cta-box p{font-size:15px!important}
+  .medo-tpl .mt-related{grid-template-columns:1fr!important;gap:12px!important}
+  .medo-tpl .mt-rcard{border-radius:16px!important}
+  .medo-tpl .mt-rcard-body h4{font-size:15px!important}
+  .medo-tpl .mt-faq details{border-radius:12px!important;margin-bottom:6px!important}
+  .medo-tpl .mt-faq summary{padding:14px 18px!important;font-size:15px!important}
+  .medo-tpl .mt-faq .mt-faq-body{padding:0 18px 16px!important;font-size:14px!important}
+  .medo-tpl .mt-footer-nav{gap:6px!important;margin-bottom:16px!important}
+  .medo-tpl .mt-footer-nav a{font-size:12px!important;padding:5px 12px!important}
+  .medo-tpl .mt-footer{font-size:12px!important}
+}
+
+/* ========== TABLET ========== */
+@media(min-width:769px) and (max-width:1024px){
+  .medo-tpl .mt-container{padding:0 32px!important}
+  .medo-tpl .mt-hero h2{font-size:36px!important;letter-spacing:-.6px!important}
+  .medo-tpl .mt-hero-desc{font-size:18px!important}
+  .medo-tpl .mt-split{gap:32px!important}
+  .medo-tpl .mt-split-left h3{font-size:28px!important;letter-spacing:-.4px!important}
+  .medo-tpl .mt-section-header h3{font-size:28px!important;letter-spacing:-.4px!important}
+  .medo-tpl .mt-pf-grid{grid-template-columns:repeat(2,1fr)!important}
+  .medo-tpl .mt-showcase{grid-template-columns:repeat(2,1fr)!important}
+  .medo-tpl .mt-related{grid-template-columns:repeat(2,1fr)!important}
+}
+</style>
+
+<div class="medo-tpl">
+<div class="mt-container">
+
+  <!-- ===== FEATURES ===== -->
+  <div class="mt-split">
+    <div class="mt-split-left mt-split-sticky">
+      <div class="mt-screenshot-inline">
+        <img src="https://miaoda-edit-image.s3cdn.medo.dev/94i7sq6fzs3k/IMG-al9xcwgnm680.jpg" alt="Another World adventure game screenshot — pixel art open world exploration" width="1100" height="619" loading="lazy">
+      </div>
+      <h3>Everything You Need to Create Your Own Adventure</h3>
+      <p>Open world exploration, combat systems, quests, and pixel art graphics — all built with AI, ready to play in minutes.</p>
+      <div class="mt-try-wrap">
+        <a href="https://medo.dev/apps/app-94i7sq6fzs3k" target="_blank" rel="noopener" class="mt-try-btn">Try it free &#x2192;</a>
+        <div class="mt-trust">Free to start · No coding · Deploy in seconds</div>
+      </div>
+    </div>
+    <div class="mt-split-right">
+      <div class="mt-features">
+      <div class="mt-feat">
+        <div class="mt-feat-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div>
+        <h4>Open World Exploration</h4>
+        <p>Vast, explorable game world with multiple biomes, hidden secrets, and interactive environments. Discover new areas as your adventure unfolds.</p>
+      </div>
+      <div class="mt-feat">
+        <div class="mt-feat-icon"><svg viewBox="0 0 24 24"><path d="M14.5 4h-5L7 7H2v13h20V7h-5l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg></div>
+        <h4>Combat System</h4>
+        <p>Engaging turn-based or real-time combat with enemies, bosses, and strategic abilities. Level up your skills and defeat increasingly challenging foes.</p>
+      </div>
+      <div class="mt-feat">
+        <div class="mt-feat-icon"><svg viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
+        <h4>Character Progression</h4>
+        <p>RPG-style leveling system with experience points, stat upgrades, and skill trees. Watch your character grow stronger with every battle.</p>
+      </div>
+      <div class="mt-feat">
+        <div class="mt-feat-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg></div>
+        <h4>Quest System</h4>
+        <p>Rich storylines with main quests and side missions. NPCs with dialogue, choices that matter, and branching narratives that shape your journey.</p>
+      </div>
+      <div class="mt-feat">
+        <div class="mt-feat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div>
+        <h4>Pixel Art Graphics</h4>
+        <p>Charming retro-style pixel art with smooth animations, detailed sprites, and atmospheric tileset environments that bring your world to life.</p>
+      </div>
+      <div class="mt-feat">
+        <div class="mt-feat-icon"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+        <h4>Inventory Management</h4>
+        <p>Collect weapons, armor, potions, and quest items. Equip gear, manage resources, and trade with merchants throughout your adventure.</p>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <!-- ===== PERFECT FOR ===== -->
+  <div class="mt-section">
+    <div class="mt-section-header">
+      <h3>Built for Every Game Creator</h3>
+      <p>Whether you&#x27;re a seasoned developer or just starting your game-making journey.</p>
+    </div>
+    <div class="mt-pf-grid">
+      <div class="mt-pf">
+        <div class="mt-pf-icon"><svg viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></div>
+        <h4>Indie Game Developers</h4>
+        <p>Prototype adventure games rapidly with AI. Test gameplay mechanics, iterate on world design, and build a playable demo without writing a single line of code.</p>
+      </div>
+      <div class="mt-pf">
+        <div class="mt-pf-icon"><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 6 3 6 3s6-1 6-3v-5"/></svg></div>
+        <h4>Game Design Students</h4>
+        <p>Learn game design principles by building real games. Experiment with combat systems, quest design, and level layouts through hands-on creation.</p>
+      </div>
+      <div class="mt-pf">
+        <div class="mt-pf-icon"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+        <h4>Hobbyist Creators</h4>
+        <p>Always wanted to make a game? Turn your imagination into a playable adventure. No programming experience needed — just describe your vision.</p>
+      </div>
+      <div class="mt-pf">
+        <div class="mt-pf-icon"><svg viewBox="0 0 24 24"><path d="m22 8-6 4 6 4V8z"/><rect x="2" y="6" width="14" height="12" rx="2" ry="2"/></svg></div>
+        <h4>Content Creators</h4>
+        <p>Build custom games to share with your audience. Create unique gameplay experiences that engage your community and stand out on streaming platforms.</p>
+      </div>
+      <div class="mt-pf">
+        <div class="mt-pf-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h4>Game Jam Participants</h4>
+        <p>Rapid prototyping for game jams. Go from concept to playable game in hours, not days. Perfect for tight deadlines and creative constraints.</p>
+      </div>
+      <div class="mt-pf">
+        <div class="mt-pf-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg></div>
+        <h4>Retro Gaming Fans</h4>
+        <p>Love classic pixel art adventures? Build your own retro-style game with authentic 8-bit and 16-bit aesthetics, chiptune-inspired feel, and nostalgic gameplay.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <div class="mt-section">
+    <div class="mt-section-header">
+      <h3>Start in 3 Steps</h3>
+      <p>From idea to playable game in minutes.</p>
+    </div>
+    <div class="mt-steps">
+      <div class="mt-step">
+        <span class="mt-step-n">1</span>
+        <div class="mt-step-body">
+          <h4>Open MeDo and Start Building</h4>
+          <p>Click the button below. MeDo&#x27;s AI loads this template&#x27;s prompt and generates your adventure game in minutes. No sign-up needed to start.</p>
+        </div>
+      </div>
+      <div class="mt-step">
+        <span class="mt-step-n">2</span>
+        <div class="mt-step-body">
+          <h4>Design Your World</h4>
+          <p>Describe your game world, characters, quests, and combat mechanics. AI builds a complete, playable adventure game based on your vision.</p>
+        </div>
+      </div>
+      <div class="mt-step">
+        <span class="mt-step-n">3</span>
+        <div class="mt-step-body">
+          <h4>Customize and Share</h4>
+          <p>Adjust gameplay mechanics, add new quests, redesign levels. Deploy as a web game — MeDo handles hosting, playable from any browser on any device.</p>
+        </div>
+      </div>
+    </div>
+    <div class="mt-prompt-box">
+      <div class="mt-prompt">
+        <div class="mt-prompt-label">Recommended Prompt</div>
+        <div class="mt-prompt-text">"Create an adventure game with open world exploration, combat system, character progression, quest storylines, pixel art graphics, and inventory management"</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CTA BOX ===== -->
+  <div class="mt-cta-box">
+    <h3>Ready to Build Your Adventure Game?</h3>
+    <p>No coding required. Describe what you want, and MeDo's AI builds it for you.</p>
+    <a href="https://medo.dev/?prompt=Create%20an%20adventure%20game%20with%20open%20world%20exploration%2C%20combat%20system%2C%20character%20progression%2C%20quest%20storylines%2C%20pixel%20art%20graphics%2C%20and%20inventory%20management" class="mt-cta">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      Create this with MeDo — It's Free
+    </a>
+  </div>
+
+  <!-- ===== RELATED ===== -->
+  <div class="mt-section">
+    <div class="mt-section-header">
+      <h3>Related Templates</h3>
+    </div>
+    <div class="mt-related">
+      <a href="https://medo.dev/apps/app-7r1do0fd2l1d" class="mt-rcard">
+        <div class="mt-rcard-img">
+          <img src="https://miaoda-edit-image.s3cdn.medo.dev/7r1do0fd2l1d/IMG-7r26ecempwqo.png" alt="AI Study Companion template" loading="lazy">
+        </div>
+        <div class="mt-rcard-body">
+          <h4>AI Study Companion</h4>
+          <p>Education</p>
+        </div>
+      </a>
+      <a href="https://medo.dev/apps/app-90zxwl5r6oe9" class="mt-rcard">
+        <div class="mt-rcard-img">
+          <img src="https://miaoda-edit-image.s3cdn.medo.dev/90zxwl5r6oe9/IMG-91hsmopi794w.png" alt="Todo List Management System template" loading="lazy">
+        </div>
+        <div class="mt-rcard-body">
+          <h4>Todo List Management System</h4>
+          <p>Productivity</p>
+        </div>
+      </a>
+      <a href="https://medo.dev/apps/app-6wcw94nuaqrl" class="mt-rcard">
+        <div class="mt-rcard-img">
+          <img src="https://miaoda-edit-image.s3cdn.medo.dev/6wcw94nuaqrl/IMG-6wf4cghrssu8.png" alt="Handcrafted Ceramic Art template" loading="lazy">
+        </div>
+        <div class="mt-rcard-body">
+          <h4>Handcrafted Ceramic Art</h4>
+          <p>E-commerce</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- ===== SHOWCASE ===== -->
+  <div class="mt-section">
+    <div class="mt-section-header">
+      <h3>Built with MeDo</h3>
+      <p>Real games created by MeDo users — see what's possible.</p>
+    </div>
+    <div class="mt-showcase">
+      <a href="https://medo.dev/apps/app-8rfv8e7yby81" class="mt-scard">
+        <div class="mt-scard-img">
+          <img src="https://miaoda-edit-image.s3cdn.medo.dev/8rfv8e7yby81/IMG-8rmzh7dw88ao.png" alt="Lost Path — adventure game built with MeDo" loading="lazy" width="400" height="225">
+        </div>
+        <div class="mt-scard-body">
+          <h4>Lost Path</h4>
+          <p>Begin the journey, face the unknown, find the lost path</p>
+        </div>
+        <div class="mt-scard-meta">
+          <span>4.8K views</span>
+          <span>427 likes</span>
+        </div>
+      </a>
+      <a href="https://medo.dev/apps/app-7d1dedehaqyp" class="mt-scard">
+        <div class="mt-scard-img">
+          <img src="https://miaoda-edit-image.s3cdn.medo.dev/7d1dedehaqyp/IMG-7daib1rj0yyo.png" alt="Pixel Monster Hunter — pixel adventure game built with MeDo" loading="lazy" width="400" height="225">
+        </div>
+        <div class="mt-scard-body">
+          <h4>Pixel Monster Hunter</h4>
+          <p>Pixel adventure with auto-combat, leveling up, and ever-expanding world</p>
+        </div>
+        <div class="mt-scard-meta">
+          <span>744 views</span>
+          <span>271 likes</span>
+        </div>
+      </a>
+      <a href="https://medo.dev/apps/app-97osvzokfs3l" class="mt-scard">
+        <div class="mt-scard-img">
+          <img src="https://miaoda-edit-image.s3cdn.medo.dev/97osvzokfs3l/IMG-9lqcynycq51c.jpg" alt="Let's Make Sushi! — sushi-making game built with MeDo" loading="lazy" width="400" height="225">
+        </div>
+        <div class="mt-scard-body">
+          <h4>Let's Make Sushi!</h4>
+          <p>Sushi-making game in landscape format with cute animal customers</p>
+        </div>
+        <div class="mt-scard-meta">
+          <span>2.4K views</span>
+          <span>350 likes</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- ===== FAQ ===== -->
+  <div class="mt-section">
+    <div class="mt-section-header">
+      <h3>Frequently Asked Questions</h3>
+    </div>
+    <div class="mt-faq">
+      <details>
+        <summary>Is the Adventure Game template free to use?</summary>
+        <div class="mt-faq-body">Yes. You can start building your adventure game for free on MeDo — no credit card or coding skills required. MeDo handles hosting and deployment automatically, so there are no server costs to get started.</div>
+      </details>
+      <details>
+        <summary>Can I customize the game world and storyline?</summary>
+        <div class="mt-faq-body">Absolutely. The template is fully customizable through MeDo's AI conversation interface. You can design your own world map, create unique characters, write quest storylines, adjust combat mechanics, and build the exact adventure you envision.</div>
+      </details>
+      <details>
+        <summary>Do I need coding experience to build an adventure game?</summary>
+        <div class="mt-faq-body">No coding experience needed. MeDo's AI handles all the programming. Just describe what you want — characters, quests, combat mechanics, world design — and the AI generates a fully playable adventure game for you.</div>
+      </details>
+      <details>
+        <summary>Can I publish and share my adventure game?</summary>
+        <div class="mt-faq-body">Yes. Once you're happy with your game, you can deploy it as a web app with one click. MeDo handles hosting, so you can share a link with anyone — players can enjoy your game from any browser on any device.</div>
+      </details>
+    </div>
+  </div>
+
+  <div class="mt-footer">
+    <div class="mt-footer-nav">
+      <a href="https://medo.dev/marketplace/education">Education</a>
+      <a href="https://medo.dev/marketplace/website">Website</a>
+      <a href="https://medo.dev/marketplace/marketing">Marketing</a>
+      <a href="https://medo.dev/marketplace/productivity">Productivity</a>
+      <a href="https://medo.dev/marketplace/e-commerce">E-commerce</a>
+      <a href="https://medo.dev/marketplace/tools">Tools</a>
+      <a href="https://medo.dev/marketplace/games">Games</a>
+      <a href="https://medo.dev/marketplace/survey">Survey</a>
+      <a href="https://medo.dev/marketplace/research">Research</a>
+    </div>
+    <p>&copy; 2026 <a href="https://medo.dev">MeDo</a>. Build any app with AI — no coding required.</p>
+  </div>
+
+</div>
+</div>

@@ -1,0 +1,535 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "E-commerce Store",
+      "description": "Build a complete online store with product catalog, shopping cart, payment integration, and order management — all powered by AI, no coding required.",
+      "applicationCategory": "E-commerce",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "MeDo",
+        "url": "https://medo.dev"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "MeDo", "item": "https://medo.dev"},
+        {"@type": "ListItem", "position": 2, "name": "E-commerce", "item": "https://medo.dev/marketplace/e-commerce"},
+        {"@type": "ListItem", "position": 3, "name": "E-commerce Store"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is the E-commerce Store template free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. You can start building your online store for free on MeDo. No credit card or coding skills required — MeDo handles hosting and deployment automatically."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does payment integration work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The template supports payment processing integration through MeDo's AI interface. You can set up product pricing, currency options, and checkout flows. For production payment processing, connect your preferred payment provider through the app settings."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I customize the store design for my brand?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. Through MeDo's AI conversation interface, you can change colors, typography, layout, product categories, and the overall visual theme to match your brand identity. Add your logo, customize navigation, and create a unique shopping experience."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it support inventory and order management?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The template includes inventory tracking with stock levels, low-stock alerts, and product variants. Order management features let you view order history, update fulfillment status, and manage customer information — all from a clean dashboard."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+/* ========== GHOST WRAPPER RESET ========== */
+.kg-html-card,.kg-card,.gh-content .kg-html-card{background:transparent!important;border:none!important;box-shadow:none!important;border-radius:0!important;padding:0!important;margin-left:0!important;margin-right:0!important;max-width:none!important}
+/* ========== RESET ========== */
+.medo-tpl,.medo-tpl *,.medo-tpl *::before,.medo-tpl *::after{box-sizing:border-box!important;margin:0!important;padding:0!important;border:none!important;text-decoration:none!important;list-style:none!important;outline:none!important;box-shadow:none!important;float:none!important;background:transparent!important}
+.medo-tpl{font-family:'SF Pro Text',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif!important;color:#1d1d1f!important;line-height:1.47!important;-webkit-font-smoothing:antialiased!important;width:calc(100vw - 200px)!important;position:relative!important;left:50%!important;margin-left:calc(-50vw + 100px)!important;overflow:hidden!important}
+.medo-tpl a{color:inherit!important;text-decoration:none!important}
+.medo-tpl a:hover{text-decoration:none!important}
+.medo-tpl img{max-width:100%!important;height:auto!important;display:block!important;border:none!important}
+.medo-tpl ul{list-style:none!important;margin:0!important;padding:0!important}
+.medo-tpl li{margin:0!important;padding:0!important}
+.medo-tpl li::marker{content:""!important;display:none!important}
+.medo-tpl p{margin:0!important;padding:0!important}
+.medo-tpl h2,.medo-tpl h3,.medo-tpl h4{margin:0!important;padding:0!important}
+.medo-tpl svg{background:transparent!important}
+
+.medo-tpl .mt-container{max-width:1440px!important;margin:0 auto!important;padding:0 40px!important}
+
+/* ========== KEYFRAMES ========== */
+@keyframes mt-glow{0%,100%{box-shadow:0 4px 20px rgba(0,113,227,.35)!important}50%{box-shadow:0 4px 32px rgba(0,113,227,.55)!important}}
+
+/* ========== HERO ========== */
+.medo-tpl .mt-hero{text-align:center!important;padding:80px 0 48px!important}
+.medo-tpl .mt-hero-badge{display:inline-block!important;font-size:13px!important;font-weight:600!important;color:#0071e3!important;text-transform:uppercase!important;letter-spacing:1px!important;margin-bottom:16px!important;background:rgba(0,113,227,.08)!important;padding:6px 16px!important;border-radius:999px!important}
+.medo-tpl .mt-hero h2{font-family:Georgia,'Times New Roman','Noto Serif',serif!important;font-size:48px!important;font-weight:700!important;line-height:1.1!important;letter-spacing:-.8px!important;color:#1d1d1f!important;margin-bottom:20px!important}
+.medo-tpl .mt-hero-desc{font-size:20px!important;font-weight:300!important;color:#474747!important;letter-spacing:-.2px!important;line-height:1.4!important;max-width:720px!important;margin:0 auto 32px!important}
+.medo-tpl .mt-cta{display:inline-flex!important;align-items:center!important;gap:8px!important;background:#0071e3!important;color:#fff!important;padding:12px 24px!important;border-radius:999px!important;font-size:17px!important;font-weight:400!important;letter-spacing:-.1px!important;transition:background .3s ease,transform .2s ease!important;cursor:pointer!important;text-decoration:none!important}
+.medo-tpl .mt-cta:hover{background:#0077ed!important;color:#fff!important;text-decoration:none!important;transform:translateY(-1px)!important}
+.medo-tpl .mt-cta svg{width:18px!important;height:18px!important;flex-shrink:0!important}
+
+/* ========== SCREENSHOT ========== */
+.medo-tpl .mt-screenshot-inline{border-radius:20px!important;overflow:hidden!important;margin-bottom:20px!important;box-shadow:0 8px 40px rgba(0,0,0,.12),0 2px 8px rgba(0,0,0,.06)!important}
+.medo-tpl .mt-screenshot-inline img{width:100%!important;display:block!important}
+
+/* ========== SPLIT LAYOUT ========== */
+.medo-tpl .mt-split{display:grid!important;grid-template-columns:2fr 3fr!important;gap:48px!important;align-items:start!important;margin-bottom:80px!important}
+.medo-tpl .mt-split-left,.medo-tpl .mt-split-right{background:transparent!important}
+.medo-tpl .mt-split-left h3{font-family:Georgia,'Times New Roman','Noto Serif',serif!important;font-size:32px!important;font-weight:700!important;line-height:1.2!important;letter-spacing:-.5px!important;color:#1d1d1f!important;margin-bottom:12px!important}
+.medo-tpl .mt-split-left>p{font-size:17px!important;color:#707070!important;letter-spacing:-.1px!important;line-height:1.47!important;margin-bottom:20px!important}
+.medo-tpl .mt-split-sticky{position:sticky!important;top:32px!important}
+.medo-tpl .mt-try-wrap{text-align:center!important;margin-top:28px!important;display:block!important}
+.medo-tpl .mt-try-btn{display:inline-flex!important;align-items:center!important;gap:8px!important;background:linear-gradient(135deg,#0071e3 0%,#005bb5 100%)!important;color:#fff!important;padding:14px 32px!important;border-radius:14px!important;font-size:17px!important;font-weight:600!important;letter-spacing:-.1px!important;cursor:pointer!important;text-decoration:none!important;transition:transform .2s ease,box-shadow .3s ease!important;box-shadow:0 2px 12px rgba(0,113,227,.3)!important}
+.medo-tpl .mt-try-btn:hover{background:linear-gradient(135deg,#0077ed 0%,#0062c4 100%)!important;color:#fff!important;text-decoration:none!important;transform:translateY(-2px)!important;box-shadow:0 4px 20px rgba(0,113,227,.4)!important}
+.medo-tpl .mt-trust{font-size:13px!important;color:#999!important;margin-top:14px!important;letter-spacing:-.02px!important}
+
+/* ========== SECTIONS ========== */
+.medo-tpl .mt-section{margin-bottom:80px!important}
+.medo-tpl .mt-section-header{text-align:center!important;margin-bottom:40px!important}
+.medo-tpl .mt-section-header h3{font-family:Georgia,'Times New Roman','Noto Serif',serif!important;font-size:32px!important;font-weight:700!important;line-height:1.2!important;letter-spacing:-.5px!important;color:#1d1d1f!important;margin-bottom:8px!important}
+.medo-tpl .mt-section-header p{font-size:17px!important;color:#707070!important;letter-spacing:-.1px!important;line-height:1.47!important;max-width:600px!important;margin:0 auto!important}
+
+/* ========== FEATURE CARDS ========== */
+.medo-tpl .mt-features{display:grid!important;grid-template-columns:repeat(2,1fr)!important;gap:14px!important}
+.medo-tpl .mt-feat{padding:24px!important;background:#f5f5f7!important;border-radius:20px!important;transition:transform .3s ease,box-shadow .3s ease!important}
+.medo-tpl .mt-feat:hover{transform:translateY(-4px)!important;box-shadow:0 8px 30px rgba(0,0,0,.08)!important}
+.medo-tpl .mt-feat-icon{width:44px!important;height:44px!important;margin-bottom:12px!important;color:#0071e3!important;background:rgba(0,113,227,.1)!important;border-radius:12px!important;display:flex!important;align-items:center!important;justify-content:center!important}
+.medo-tpl .mt-feat-icon svg{width:24px!important;height:24px!important;stroke:currentColor!important;fill:none!important;stroke-width:1.5!important;stroke-linecap:round!important;stroke-linejoin:round!important}
+.medo-tpl .mt-feat h4{font-size:17px!important;font-weight:600!important;color:#1d1d1f!important;letter-spacing:-.1px!important;margin-bottom:6px!important}
+.medo-tpl .mt-feat p{font-size:15px!important;color:#707070!important;line-height:1.47!important;letter-spacing:-.04px!important}
+
+/* ========== PERFECT FOR ========== */
+.medo-tpl .mt-pf-grid{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:16px!important}
+.medo-tpl .mt-pf{padding:28px!important;background:#fff!important;border-radius:20px!important;transition:transform .3s ease,box-shadow .3s ease!important;box-shadow:0 1px 4px rgba(0,0,0,.06),0 0 0 1px rgba(0,0,0,.04)!important}
+.medo-tpl .mt-pf:hover{transform:translateY(-4px)!important;box-shadow:0 8px 30px rgba(0,0,0,.1)!important}
+.medo-tpl .mt-pf-icon{width:44px!important;height:44px!important;margin-bottom:14px!important;color:#0071e3!important;background:rgba(0,113,227,.1)!important;border-radius:12px!important;display:flex!important;align-items:center!important;justify-content:center!important}
+.medo-tpl .mt-pf-icon svg{width:24px!important;height:24px!important;stroke:currentColor!important;fill:none!important;stroke-width:1.5!important;stroke-linecap:round!important;stroke-linejoin:round!important}
+.medo-tpl .mt-pf h4{font-family:Georgia,'Times New Roman','Noto Serif',serif!important;font-size:19px!important;font-weight:700!important;color:#1d1d1f!important;letter-spacing:-.2px!important;margin-bottom:8px!important}
+.medo-tpl .mt-pf p{font-size:15px!important;color:#707070!important;line-height:1.5!important;letter-spacing:-.04px!important}
+
+/* ========== STEPS ========== */
+.medo-tpl .mt-steps{margin:0 auto!important}
+.medo-tpl .mt-step{display:flex!important;align-items:flex-start!important;gap:16px!important;padding:24px!important;background:#f5f5f7!important;border-radius:20px!important;margin-bottom:12px!important;transition:transform .3s ease,box-shadow .3s ease!important}
+.medo-tpl .mt-step:hover{transform:translateY(-2px)!important;box-shadow:0 4px 16px rgba(0,0,0,.06)!important}
+.medo-tpl .mt-step-n{width:32px!important;height:32px!important;min-width:32px!important;border-radius:999px!important;background:#0071e3!important;color:#fff!important;display:flex!important;align-items:center!important;justify-content:center!important;font-size:15px!important;font-weight:600!important;flex-shrink:0!important}
+.medo-tpl .mt-step-body h4{font-size:17px!important;font-weight:600!important;color:#1d1d1f!important;letter-spacing:-.1px!important;margin-bottom:6px!important}
+.medo-tpl .mt-step-body p{font-size:15px!important;color:#707070!important;line-height:1.5!important;letter-spacing:-.04px!important}
+
+/* ========== PROMPT BOX ========== */
+.medo-tpl .mt-prompt-box{margin:32px auto 0!important;text-align:center!important}
+.medo-tpl .mt-prompt{background:#f5f5f7!important;border-radius:20px!important;padding:24px 28px!important;margin-bottom:20px!important;border-left:4px solid #0071e3!important;text-align:left!important}
+.medo-tpl .mt-prompt-label{font-size:12px!important;font-weight:600!important;color:#0071e3!important;margin-bottom:8px!important;text-transform:uppercase!important;letter-spacing:.5px!important}
+.medo-tpl .mt-prompt-text{font-size:17px!important;color:#1d1d1f!important;font-style:italic!important;line-height:1.47!important;letter-spacing:-.1px!important}
+
+/* ========== SHOWCASE ========== */
+.medo-tpl .mt-showcase{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:20px!important}
+.medo-tpl .mt-scard{background:#f5f5f7!important;border-radius:28px!important;overflow:hidden!important;transition:transform .3s ease,box-shadow .3s ease!important;display:block!important}
+.medo-tpl .mt-scard:hover{transform:translateY(-4px)!important;box-shadow:0 8px 30px rgba(0,0,0,.1)!important}
+.medo-tpl .mt-scard-img{aspect-ratio:16/9!important;background:#eee!important;overflow:hidden!important}
+.medo-tpl .mt-scard-img img{width:100%!important;height:100%!important;object-fit:cover!important;transition:transform .4s ease!important}
+.medo-tpl .mt-scard:hover .mt-scard-img img{transform:scale(1.03)!important}
+.medo-tpl .mt-scard-body{padding:16px 24px 6px!important}
+.medo-tpl .mt-scard-body h4{font-size:17px!important;font-weight:600!important;color:#1d1d1f!important;letter-spacing:-.1px!important;margin-bottom:4px!important}
+.medo-tpl .mt-scard-body p{font-size:14px!important;color:#707070!important;letter-spacing:-.04px!important;line-height:1.43!important;display:-webkit-box!important;-webkit-line-clamp:2!important;-webkit-box-orient:vertical!important;overflow:hidden!important}
+.medo-tpl .mt-scard-meta{padding:6px 24px 16px!important;display:flex!important;gap:14px!important;font-size:12px!important;color:#707070!important}
+.medo-tpl .mt-scard-meta span{display:flex!important;align-items:center!important;gap:4px!important}
+
+/* ========== FAQ ========== */
+.medo-tpl .mt-faq{max-width:800px!important;margin:0 auto!important}
+.medo-tpl .mt-faq details{background:#f5f5f7!important;border-radius:16px!important;margin-bottom:8px!important;overflow:hidden!important}
+.medo-tpl .mt-faq summary{padding:18px 24px!important;font-size:17px!important;font-weight:600!important;color:#1d1d1f!important;letter-spacing:-.1px!important;cursor:pointer!important;list-style:none!important;display:flex!important;align-items:center!important;justify-content:space-between!important;transition:background .2s ease!important}
+.medo-tpl .mt-faq summary::-webkit-details-marker{display:none!important}
+.medo-tpl .mt-faq summary::after{content:"+"!important;font-size:20px!important;font-weight:300!important;color:#707070!important;transition:transform .2s ease!important;flex-shrink:0!important;margin-left:16px!important}
+.medo-tpl .mt-faq details[open] summary::after{content:"\2212"!important}
+.medo-tpl .mt-faq details[open] summary{background:rgba(0,113,227,.04)!important}
+.medo-tpl .mt-faq .mt-faq-body{padding:0 24px 20px!important;font-size:15px!important;color:#707070!important;line-height:1.6!important;letter-spacing:-.04px!important}
+
+/* ========== CTA BOX ========== */
+.medo-tpl .mt-cta-box{text-align:center!important;padding:80px 32px!important;background:linear-gradient(135deg,#1d1d1f 0%,#2d2d3f 100%)!important;border-radius:28px!important;margin-bottom:80px!important}
+.medo-tpl .mt-cta-box h3{font-family:Georgia,'Times New Roman','Noto Serif',serif!important;font-size:32px!important;font-weight:700!important;line-height:1.2!important;letter-spacing:-.5px!important;margin-bottom:12px!important;color:#fff!important}
+.medo-tpl .mt-cta-box p{color:rgba(255,255,255,.7)!important;font-size:17px!important;letter-spacing:-.1px!important;margin-bottom:24px!important}
+.medo-tpl .mt-cta-box .mt-cta{animation:mt-glow 3s ease-in-out infinite!important}
+.medo-tpl .mt-cta-box .mt-cta:hover{animation:none!important}
+
+/* ========== RELATED ========== */
+.medo-tpl .mt-related{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:20px!important}
+.medo-tpl .mt-rcard{background:#f5f5f7!important;border-radius:28px!important;overflow:hidden!important;transition:transform .3s ease,box-shadow .3s ease!important;display:block!important}
+.medo-tpl .mt-rcard:hover{transform:translateY(-4px)!important;box-shadow:0 8px 30px rgba(0,0,0,.1)!important}
+.medo-tpl .mt-rcard-img{aspect-ratio:16/9!important;background:#eee!important;overflow:hidden!important}
+.medo-tpl .mt-rcard-img img{width:100%!important;height:100%!important;object-fit:cover!important;transition:transform .4s ease!important}
+.medo-tpl .mt-rcard:hover .mt-rcard-img img{transform:scale(1.03)!important}
+.medo-tpl .mt-rcard-body{padding:16px 24px!important}
+.medo-tpl .mt-rcard-body h4{font-size:17px!important;font-weight:600!important;color:#1d1d1f!important;letter-spacing:-.1px!important;margin-bottom:4px!important}
+.medo-tpl .mt-rcard-body p{font-size:14px!important;color:#707070!important}
+
+/* ========== FOOTER ========== */
+.medo-tpl .mt-footer{padding:40px 0 32px!important;text-align:center!important;color:#707070!important;font-size:14px!important;letter-spacing:-.04px!important}
+.medo-tpl .mt-footer-nav{display:flex!important;flex-wrap:wrap!important;justify-content:center!important;gap:8px!important;margin-bottom:20px!important}
+.medo-tpl .mt-footer-nav a{display:inline-block!important;font-size:13px!important;color:#707070!important;background:#f5f5f7!important;padding:6px 14px!important;border-radius:999px!important;transition:background .2s ease,color .2s ease!important}
+.medo-tpl .mt-footer-nav a:hover{background:rgba(0,113,227,.1)!important;color:#0071e3!important}
+.medo-tpl .mt-footer a{color:#0066cc!important}
+
+/* ========== MOBILE ========== */
+@media(max-width:768px){
+  .medo-tpl{width:100vw!important;margin-left:-50vw!important}
+  .medo-tpl .mt-container{padding:0 16px!important}
+  .medo-tpl .mt-hero{padding:40px 0 28px!important}
+  .medo-tpl .mt-hero-badge{font-size:11px!important;padding:5px 12px!important}
+  .medo-tpl .mt-hero h2{font-size:28px!important;letter-spacing:-.4px!important;line-height:1.15!important}
+  .medo-tpl .mt-hero-desc{font-size:16px!important;font-weight:400!important;line-height:1.47!important;margin-bottom:24px!important}
+  .medo-tpl .mt-cta{font-size:15px!important;padding:10px 20px!important}
+  .medo-tpl .mt-screenshot-inline{border-radius:12px!important;margin-bottom:16px!important}
+  .medo-tpl .mt-split{grid-template-columns:1fr!important;gap:24px!important;margin-bottom:40px!important}
+  .medo-tpl .mt-split-sticky{position:static!important}
+  .medo-tpl .mt-split-left h3{font-size:22px!important;letter-spacing:-.3px!important;margin-bottom:10px!important}
+  .medo-tpl .mt-split-left>p{font-size:15px!important}
+  .medo-tpl .mt-try-btn{padding:12px 28px!important;font-size:16px!important;border-radius:12px!important}
+  .medo-tpl .mt-section{margin-bottom:40px!important}
+  .medo-tpl .mt-section-header{margin-bottom:24px!important}
+  .medo-tpl .mt-section-header h3{font-size:22px!important;letter-spacing:-.3px!important}
+  .medo-tpl .mt-section-header p{font-size:15px!important}
+  .medo-tpl .mt-features{grid-template-columns:1fr!important;gap:8px!important}
+  .medo-tpl .mt-feat{padding:18px!important;border-radius:16px!important}
+  .medo-tpl .mt-feat-icon{width:36px!important;height:36px!important;margin-bottom:10px!important;border-radius:10px!important}
+  .medo-tpl .mt-feat-icon svg{width:20px!important;height:20px!important}
+  .medo-tpl .mt-feat h4{font-size:15px!important}
+  .medo-tpl .mt-feat p{font-size:14px!important}
+  .medo-tpl .mt-pf-grid{grid-template-columns:1fr!important;gap:10px!important}
+  .medo-tpl .mt-pf{padding:20px!important;border-radius:16px!important}
+  .medo-tpl .mt-pf-icon{width:36px!important;height:36px!important;margin-bottom:10px!important;border-radius:10px!important}
+  .medo-tpl .mt-pf-icon svg{width:20px!important;height:20px!important}
+  .medo-tpl .mt-pf h4{font-size:17px!important}
+  .medo-tpl .mt-pf p{font-size:14px!important}
+  .medo-tpl .mt-step{padding:18px!important;border-radius:16px!important;margin-bottom:8px!important;gap:12px!important}
+  .medo-tpl .mt-step-n{width:28px!important;height:28px!important;min-width:28px!important;font-size:13px!important}
+  .medo-tpl .mt-step-body h4{font-size:15px!important}
+  .medo-tpl .mt-step-body p{font-size:14px!important}
+  .medo-tpl .mt-prompt{padding:20px!important;border-radius:16px!important}
+  .medo-tpl .mt-prompt-text{font-size:15px!important}
+  .medo-tpl .mt-showcase{grid-template-columns:1fr!important;gap:12px!important}
+  .medo-tpl .mt-scard{border-radius:16px!important}
+  .medo-tpl .mt-scard-body h4{font-size:15px!important}
+  .medo-tpl .mt-scard-body p{font-size:13px!important}
+  .medo-tpl .mt-cta-box{padding:40px 20px!important;border-radius:16px!important;margin-bottom:40px!important}
+  .medo-tpl .mt-cta-box h3{font-size:22px!important;letter-spacing:-.3px!important}
+  .medo-tpl .mt-cta-box p{font-size:15px!important}
+  .medo-tpl .mt-related{grid-template-columns:1fr!important;gap:12px!important}
+  .medo-tpl .mt-rcard{border-radius:16px!important}
+  .medo-tpl .mt-rcard-body h4{font-size:15px!important}
+  .medo-tpl .mt-faq details{border-radius:12px!important;margin-bottom:6px!important}
+  .medo-tpl .mt-faq summary{padding:14px 18px!important;font-size:15px!important}
+  .medo-tpl .mt-faq .mt-faq-body{padding:0 18px 16px!important;font-size:14px!important}
+  .medo-tpl .mt-footer-nav{gap:6px!important;margin-bottom:16px!important}
+  .medo-tpl .mt-footer-nav a{font-size:12px!important;padding:5px 12px!important}
+  .medo-tpl .mt-footer{font-size:12px!important}
+}
+
+/* ========== TABLET ========== */
+@media(min-width:769px) and (max-width:1024px){
+  .medo-tpl .mt-container{padding:0 32px!important}
+  .medo-tpl .mt-hero h2{font-size:36px!important;letter-spacing:-.6px!important}
+  .medo-tpl .mt-hero-desc{font-size:18px!important}
+  .medo-tpl .mt-split{gap:32px!important}
+  .medo-tpl .mt-split-left h3{font-size:28px!important;letter-spacing:-.4px!important}
+  .medo-tpl .mt-section-header h3{font-size:28px!important;letter-spacing:-.4px!important}
+  .medo-tpl .mt-pf-grid{grid-template-columns:repeat(2,1fr)!important}
+  .medo-tpl .mt-showcase{grid-template-columns:repeat(2,1fr)!important}
+  .medo-tpl .mt-related{grid-template-columns:repeat(2,1fr)!important}
+}
+</style>
+
+<div class="medo-tpl">
+<div class="mt-container">
+
+  <!-- ===== FEATURES ===== -->
+  <div class="mt-split">
+    <div class="mt-split-left mt-split-sticky">
+      <div class="mt-screenshot-inline">
+        <img src="https://miaoda-edit-image.s3cdn.medo.dev/6wcw94nuaqrl/IMG-6wf4cghrssu8.png" alt="E-commerce Store app screenshot — product catalog and online shopping interface" width="1100" height="619" loading="lazy">
+      </div>
+      <h3>Everything You Need to Launch Your Online Store</h3>
+      <p>Product catalog, shopping cart, payment integration, and order management — launch your store in minutes, not months.</p>
+      <div class="mt-try-wrap">
+        <a href="https://medo.dev/apps/app-6wcw94nuaqrl" target="_blank" rel="noopener" class="mt-try-btn">Try it free &#x2192;</a>
+        <div class="mt-trust">Free to start · No coding · Deploy in seconds</div>
+      </div>
+    </div>
+    <div class="mt-split-right">
+      <div class="mt-features">
+      <div class="mt-feat">
+        <div class="mt-feat-icon"><svg viewBox="0 0 24 24"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg></div>
+        <h4>Product Catalog</h4>
+        <p>Showcase your products with rich images, descriptions, variants, and pricing. Organize by categories and collections for easy browsing.</p>
+      </div>
+      <div class="mt-feat">
+        <div class="mt-feat-icon"><svg viewBox="0 0 24 24"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg></div>
+        <h4>Shopping Cart</h4>
+        <p>Smooth add-to-cart experience with quantity controls, cart preview, and persistent state. Customers pick up right where they left off.</p>
+      </div>
+      <div class="mt-feat">
+        <div class="mt-feat-icon"><svg viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg></div>
+        <h4>Payment Integration</h4>
+        <p>Secure checkout with support for major payment methods. Set up pricing, taxes, and currency options through a simple interface.</p>
+      </div>
+      <div class="mt-feat">
+        <div class="mt-feat-icon"><svg viewBox="0 0 24 24"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg></div>
+        <h4>Order Management</h4>
+        <p>View incoming orders, update fulfillment status, and track order history. Built-in dashboard shows sales metrics and customer activity.</p>
+      </div>
+      <div class="mt-feat">
+        <div class="mt-feat-icon"><svg viewBox="0 0 24 24"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg></div>
+        <h4>Inventory Tracking</h4>
+        <p>Monitor stock levels in real time. Get low-stock alerts, manage product variants, and prevent overselling with automatic quantity updates.</p>
+      </div>
+      <div class="mt-feat">
+        <div class="mt-feat-icon"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h4>Customer Management</h4>
+        <p>Track customer profiles, purchase history, and preferences. Build relationships with your buyers through organized customer data.</p>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <!-- ===== PERFECT FOR ===== -->
+  <div class="mt-section">
+    <div class="mt-section-header">
+      <h3>Built for Every Seller</h3>
+      <p>Whether you&#x27;re selling handmade goods or scaling a global brand.</p>
+    </div>
+    <div class="mt-pf-grid">
+      <div class="mt-pf">
+        <div class="mt-pf-icon"><svg viewBox="0 0 24 24"><path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z"/><path d="m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9"/><path d="M12 3v6"/></svg></div>
+        <h4>Small Business Owners</h4>
+        <p>Launch your online store without hiring developers. List products, accept payments, and manage orders — all from a single dashboard you build in minutes.</p>
+      </div>
+      <div class="mt-pf">
+        <div class="mt-pf-icon"><svg viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></div>
+        <h4>Artisans &amp; Makers</h4>
+        <p>Sell handmade ceramics, jewelry, art, or crafts with beautiful product pages. Showcase your story alongside your creations and reach customers worldwide.</p>
+      </div>
+      <div class="mt-pf">
+        <div class="mt-pf-icon"><svg viewBox="0 0 24 24"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg></div>
+        <h4>Dropshippers</h4>
+        <p>Build your storefront fast and test product niches. Catalog management and order tracking give you a professional setup without touching code.</p>
+      </div>
+      <div class="mt-pf">
+        <div class="mt-pf-icon"><svg viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
+        <h4>Fashion Brands</h4>
+        <p>Display clothing lines with size variants, color swatches, and lookbook-style photography. Create a brand experience that converts browsers to buyers.</p>
+      </div>
+      <div class="mt-pf">
+        <div class="mt-pf-icon"><svg viewBox="0 0 24 24"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" x2="6" y1="2" y2="4"/><line x1="10" x2="10" y1="2" y2="4"/><line x1="14" x2="14" y1="2" y2="4"/></svg></div>
+        <h4>Food &amp; Beverage</h4>
+        <p>Sell specialty foods, beverages, or meal kits online. Manage product freshness, delivery options, and seasonal menus from one place.</p>
+      </div>
+      <div class="mt-pf">
+        <div class="mt-pf-icon"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg></div>
+        <h4>Digital Product Sellers</h4>
+        <p>Sell ebooks, templates, courses, or digital downloads. Set up instant delivery, license keys, and access management without any backend coding.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <div class="mt-section">
+    <div class="mt-section-header">
+      <h3>Start in 3 Steps</h3>
+      <p>From idea to working store in minutes.</p>
+    </div>
+    <div class="mt-steps">
+      <div class="mt-step">
+        <span class="mt-step-n">1</span>
+        <div class="mt-step-body">
+          <h4>Open MeDo and Start Building</h4>
+          <p>Click the button below. MeDo&#x27;s AI loads this template&#x27;s prompt and generates your online store in minutes. No sign-up needed to start.</p>
+        </div>
+      </div>
+      <div class="mt-step">
+        <span class="mt-step-n">2</span>
+        <div class="mt-step-body">
+          <h4>Add Your Products</h4>
+          <p>Upload product images, write descriptions, set prices and variants. The AI helps you organize categories and create compelling product pages.</p>
+        </div>
+      </div>
+      <div class="mt-step">
+        <span class="mt-step-n">3</span>
+        <div class="mt-step-body">
+          <h4>Customize and Launch</h4>
+          <p>Adjust your store&#x27;s design, set up payment and shipping, then publish. MeDo handles hosting — your store is live and accessible from any device.</p>
+        </div>
+      </div>
+    </div>
+    <div class="mt-prompt-box">
+      <div class="mt-prompt">
+        <div class="mt-prompt-label">Recommended Prompt</div>
+        <div class="mt-prompt-text">"Create an e-commerce store with product catalog, shopping cart, payment integration, order management, and customer accounts"</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CTA BOX ===== -->
+  <div class="mt-cta-box">
+    <h3>Ready to Build Your Online Store?</h3>
+    <p>No coding required. Describe what you want, and MeDo's AI builds it for you.</p>
+    <a href="https://medo.dev/?prompt=Create%20an%20e-commerce%20store%20with%20product%20catalog%2C%20shopping%20cart%2C%20payment%20integration%2C%20order%20management%2C%20and%20customer%20accounts" class="mt-cta">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      Create this with MeDo — It's Free
+    </a>
+  </div>
+
+  <!-- ===== RELATED ===== -->
+  <div class="mt-section">
+    <div class="mt-section-header">
+      <h3>Related Templates</h3>
+    </div>
+    <div class="mt-related">
+      <a href="https://medo.dev/apps/app-90zxwl5r6oe9" class="mt-rcard">
+        <div class="mt-rcard-img">
+          <img src="https://miaoda-edit-image.s3cdn.medo.dev/90zxwl5r6oe9/IMG-91hsmopi794w.png" alt="Todo List Management System template" loading="lazy">
+        </div>
+        <div class="mt-rcard-body">
+          <h4>Todo List Management System</h4>
+          <p>Productivity</p>
+        </div>
+      </a>
+      <a href="https://medo.dev/apps/app-7r1do0fd2l1d" class="mt-rcard">
+        <div class="mt-rcard-img">
+          <img src="https://miaoda-edit-image.s3cdn.medo.dev/7r1do0fd2l1d/IMG-7r26ecempwqo.png" alt="AI Study Companion template" loading="lazy">
+        </div>
+        <div class="mt-rcard-body">
+          <h4>AI Study Companion</h4>
+          <p>Education</p>
+        </div>
+      </a>
+      <a href="https://medo.dev/apps/app-91zelyvq8hdt" class="mt-rcard">
+        <div class="mt-rcard-img">
+          <img src="https://miaoda-edit-image.s3cdn.medo.dev/91zelyvq8hdt/IMG-922v96y3w8w0.png" alt="Production Landing Page template" loading="lazy">
+        </div>
+        <div class="mt-rcard-body">
+          <h4>Production Landing Page</h4>
+          <p>Website</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- ===== SHOWCASE ===== -->
+  <div class="mt-section">
+    <div class="mt-section-header">
+      <h3>Built with MeDo</h3>
+      <p>Real e-commerce apps created by MeDo users — see what's possible.</p>
+    </div>
+    <div class="mt-showcase">
+      <a href="https://medo.dev/apps/app-8q7vkvuq2g3l" class="mt-scard">
+        <div class="mt-scard-img">
+          <img src="https://miaoda-screenshot-img.s3cdn.medo.dev/preview_screen/app-8q7vkvuq2g3l/app-8q7vkvuq2g3l_1767628673162_402d.png" alt="SCREP | ZEN Fashion — premium fashion e-commerce platform built with MeDo" loading="lazy" width="400" height="225">
+        </div>
+        <div class="mt-scard-body">
+          <h4>SCREP | ZEN Fashion</h4>
+          <p>Premium fashion e-commerce platform with full shopping functionality for a modern clothing brand</p>
+        </div>
+        <div class="mt-scard-meta">
+          <span>900 views</span>
+          <span>347 likes</span>
+        </div>
+      </a>
+      <a href="https://medo.dev/apps/app-6wazp0w240zl" class="mt-scard">
+        <div class="mt-scard-img">
+          <img src="https://miaoda-edit-image.s3cdn.medo.dev/6wazp0w240zl/IMG-6wbdqkl5258g.png" alt="Canadian MapleCard Co. — greeting card store built with MeDo" loading="lazy" width="400" height="225">
+        </div>
+        <div class="mt-scard-body">
+          <h4>Canadian MapleCard Co.</h4>
+          <p>Premium Canadian greeting cards for all occasions with personalized recommendations and nationwide delivery</p>
+        </div>
+        <div class="mt-scard-meta">
+          <span>583 views</span>
+          <span>187 likes</span>
+        </div>
+      </a>
+      <a href="https://medo.dev/apps/app-8ybm16xm2o01" class="mt-scard">
+        <div class="mt-scard-img">
+          <img src="https://miaoda-screenshot-img.s3cdn.medo.dev/preview_screen/app-8ybm16xm2o01/app-8ybm16xm2o01_1768495041192_2e76.png" alt="LuxeVault — luxury marketplace built with MeDo" loading="lazy" width="400" height="225">
+        </div>
+        <div class="mt-scard-body">
+          <h4>LuxeVault</h4>
+          <p>Luxury interactive marketplace with negotiation features, exclusive offers, and premium shopping experience</p>
+        </div>
+        <div class="mt-scard-meta">
+          <span>152 views</span>
+          <span>172 likes</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- ===== FAQ ===== -->
+  <div class="mt-section">
+    <div class="mt-section-header">
+      <h3>Frequently Asked Questions</h3>
+    </div>
+    <div class="mt-faq">
+      <details>
+        <summary>Is the E-commerce Store template free to use?</summary>
+        <div class="mt-faq-body">Yes. You can start building your online store for free on MeDo — no credit card or coding skills required. MeDo handles hosting and deployment automatically, so there are no server costs to get started.</div>
+      </details>
+      <details>
+        <summary>How does payment integration work?</summary>
+        <div class="mt-faq-body">The template supports payment processing integration through MeDo's AI interface. You can set up product pricing, currency options, and checkout flows. For production payment processing, connect your preferred payment provider through the app settings.</div>
+      </details>
+      <details>
+        <summary>Can I customize the store design for my brand?</summary>
+        <div class="mt-faq-body">Absolutely. Through MeDo's AI conversation interface, you can change colors, typography, layout, product categories, and the overall visual theme to match your brand identity. Add your logo, customize navigation, and create a unique shopping experience.</div>
+      </details>
+      <details>
+        <summary>Does it support inventory and order management?</summary>
+        <div class="mt-faq-body">Yes. The template includes inventory tracking with stock levels, low-stock alerts, and product variants. Order management features let you view order history, update fulfillment status, and manage customer information — all from a clean dashboard.</div>
+      </details>
+    </div>
+  </div>
+
+  <div class="mt-footer">
+    <div class="mt-footer-nav">
+      <a href="https://medo.dev/marketplace/education">Education</a>
+      <a href="https://medo.dev/marketplace/website">Website</a>
+      <a href="https://medo.dev/marketplace/marketing">Marketing</a>
+      <a href="https://medo.dev/marketplace/productivity">Productivity</a>
+      <a href="https://medo.dev/marketplace/e-commerce">E-commerce</a>
+      <a href="https://medo.dev/marketplace/tools">Tools</a>
+      <a href="https://medo.dev/marketplace/games">Games</a>
+      <a href="https://medo.dev/marketplace/survey">Survey</a>
+      <a href="https://medo.dev/marketplace/research">Research</a>
+    </div>
+    <p>&copy; 2026 <a href="https://medo.dev">MeDo</a>. Build any app with AI — no coding required.</p>
+  </div>
+
+</div>
+</div>
