@@ -1,0 +1,438 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "AI Study Companion",
+  "description": "Build an intelligent study assistant that helps students organize notes, generate flashcards, create quizzes, and track learning progress — all powered by AI.",
+  "applicationCategory": "Education",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "creator": {
+    "@type": "Organization",
+    "name": "MeDo",
+    "url": "https://medo.dev"
+  }
+}
+</script>
+<style>
+/* ========== GHOST WRAPPER RESET ========== */
+.kg-html-card,.kg-card,.gh-content .kg-html-card{background:transparent!important;border:none!important;box-shadow:none!important;border-radius:0!important;padding:0!important;margin-left:0!important;margin-right:0!important;max-width:none!important}
+/* ========== RESET ========== */
+.medo-tpl,.medo-tpl *,.medo-tpl *::before,.medo-tpl *::after{box-sizing:border-box!important;margin:0!important;padding:0!important;border:none!important;text-decoration:none!important;list-style:none!important;outline:none!important;box-shadow:none!important;float:none!important;background:transparent!important}
+.medo-tpl{font-family:'SF Pro Text',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif!important;color:#1d1d1f!important;line-height:1.47!important;-webkit-font-smoothing:antialiased!important;width:calc(100vw - 200px)!important;position:relative!important;left:50%!important;margin-left:calc(-50vw + 100px)!important;overflow:hidden!important}
+.medo-tpl a{color:inherit!important;text-decoration:none!important}
+.medo-tpl a:hover{text-decoration:none!important}
+.medo-tpl img{max-width:100%!important;height:auto!important;display:block!important;border:none!important}
+.medo-tpl ul{list-style:none!important;margin:0!important;padding:0!important}
+.medo-tpl li{margin:0!important;padding:0!important}
+.medo-tpl li::marker{content:""!important;display:none!important}
+.medo-tpl p{margin:0!important;padding:0!important}
+.medo-tpl h2,.medo-tpl h3,.medo-tpl h4{margin:0!important;padding:0!important}
+.medo-tpl svg{background:transparent!important}
+
+.medo-tpl .mt-container{max-width:1440px!important;margin:0 auto!important;padding:0 40px!important}
+
+/* ========== KEYFRAMES ========== */
+@keyframes mt-glow{0%,100%{box-shadow:0 4px 20px rgba(0,113,227,.35)!important}50%{box-shadow:0 4px 32px rgba(0,113,227,.55)!important}}
+
+/* ========== HERO ========== */
+.medo-tpl .mt-hero{text-align:center!important;padding:80px 0 48px!important}
+.medo-tpl .mt-hero-badge{display:inline-block!important;font-size:13px!important;font-weight:600!important;color:#0071e3!important;text-transform:uppercase!important;letter-spacing:1px!important;margin-bottom:16px!important;background:rgba(0,113,227,.08)!important;padding:6px 16px!important;border-radius:999px!important}
+.medo-tpl .mt-hero h2{font-family:Georgia,'Times New Roman','Noto Serif',serif!important;font-size:48px!important;font-weight:700!important;line-height:1.1!important;letter-spacing:-.8px!important;color:#1d1d1f!important;margin-bottom:20px!important}
+.medo-tpl .mt-hero-desc{font-size:20px!important;font-weight:300!important;color:#474747!important;letter-spacing:-.2px!important;line-height:1.4!important;max-width:720px!important;margin:0 auto 32px!important}
+.medo-tpl .mt-cta{display:inline-flex!important;align-items:center!important;gap:8px!important;background:#0071e3!important;color:#fff!important;padding:12px 24px!important;border-radius:999px!important;font-size:17px!important;font-weight:400!important;letter-spacing:-.1px!important;transition:background .3s ease,transform .2s ease!important;cursor:pointer!important;text-decoration:none!important}
+.medo-tpl .mt-cta:hover{background:#0077ed!important;color:#fff!important;text-decoration:none!important;transform:translateY(-1px)!important}
+.medo-tpl .mt-cta svg{width:18px!important;height:18px!important;flex-shrink:0!important}
+
+/* ========== SCREENSHOT ========== */
+.medo-tpl .mt-screenshot-inline{border-radius:20px!important;overflow:hidden!important;margin-bottom:40px!important;box-shadow:0 8px 40px rgba(0,0,0,.12),0 2px 8px rgba(0,0,0,.06)!important}
+.medo-tpl .mt-screenshot-inline img{width:100%!important;display:block!important}
+
+/* ========== SPLIT LAYOUT ========== */
+.medo-tpl .mt-split{display:grid!important;grid-template-columns:2fr 3fr!important;gap:48px!important;align-items:center!important;margin-bottom:80px!important}
+.medo-tpl .mt-split-left,.medo-tpl .mt-split-right{background:transparent!important}
+.medo-tpl .mt-split-left h3{font-family:Georgia,'Times New Roman','Noto Serif',serif!important;font-size:32px!important;font-weight:700!important;line-height:1.2!important;letter-spacing:-.5px!important;color:#1d1d1f!important;margin-bottom:16px!important}
+.medo-tpl .mt-split-left>p{font-size:17px!important;color:#707070!important;letter-spacing:-.1px!important;line-height:1.47!important;margin-bottom:32px!important}
+.medo-tpl .mt-try-wrap{text-align:center!important;margin-top:28px!important;display:block!important}
+.medo-tpl .mt-try-btn{display:inline-flex!important;align-items:center!important;gap:8px!important;background:linear-gradient(135deg,#0071e3 0%,#005bb5 100%)!important;color:#fff!important;padding:14px 32px!important;border-radius:14px!important;font-size:17px!important;font-weight:600!important;letter-spacing:-.1px!important;cursor:pointer!important;text-decoration:none!important;transition:transform .2s ease,box-shadow .3s ease!important;box-shadow:0 2px 12px rgba(0,113,227,.3)!important}
+.medo-tpl .mt-try-btn:hover{background:linear-gradient(135deg,#0077ed 0%,#0062c4 100%)!important;color:#fff!important;text-decoration:none!important;transform:translateY(-2px)!important;box-shadow:0 4px 20px rgba(0,113,227,.4)!important}
+.medo-tpl .mt-trust{font-size:13px!important;color:#999!important;margin-top:14px!important;letter-spacing:-.02px!important}
+
+/* ========== SECTIONS ========== */
+.medo-tpl .mt-section{margin-bottom:80px!important}
+.medo-tpl .mt-section-header{text-align:center!important;margin-bottom:40px!important}
+.medo-tpl .mt-section-header h3{font-family:Georgia,'Times New Roman','Noto Serif',serif!important;font-size:32px!important;font-weight:700!important;line-height:1.2!important;letter-spacing:-.5px!important;color:#1d1d1f!important;margin-bottom:8px!important}
+.medo-tpl .mt-section-header p{font-size:17px!important;color:#707070!important;letter-spacing:-.1px!important;line-height:1.47!important;max-width:600px!important;margin:0 auto!important}
+
+/* ========== FEATURE CARDS ========== */
+.medo-tpl .mt-features{display:grid!important;grid-template-columns:repeat(2,1fr)!important;gap:14px!important}
+.medo-tpl .mt-feat{padding:24px!important;background:#f5f5f7!important;border-radius:20px!important;transition:transform .3s ease,box-shadow .3s ease!important}
+.medo-tpl .mt-feat:hover{transform:translateY(-4px)!important;box-shadow:0 8px 30px rgba(0,0,0,.08)!important}
+.medo-tpl .mt-feat-icon{width:44px!important;height:44px!important;margin-bottom:12px!important;color:#0071e3!important;background:rgba(0,113,227,.1)!important;border-radius:12px!important;display:flex!important;align-items:center!important;justify-content:center!important}
+.medo-tpl .mt-feat-icon svg{width:24px!important;height:24px!important;stroke:currentColor!important;fill:none!important;stroke-width:1.5!important;stroke-linecap:round!important;stroke-linejoin:round!important}
+.medo-tpl .mt-feat h4{font-size:17px!important;font-weight:600!important;color:#1d1d1f!important;letter-spacing:-.1px!important;margin-bottom:6px!important}
+.medo-tpl .mt-feat p{font-size:15px!important;color:#707070!important;line-height:1.47!important;letter-spacing:-.04px!important}
+
+/* ========== PERFECT FOR ========== */
+.medo-tpl .mt-pf-grid{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:16px!important}
+.medo-tpl .mt-pf{padding:28px!important;background:#fff!important;border-radius:20px!important;transition:transform .3s ease,box-shadow .3s ease!important;box-shadow:0 1px 4px rgba(0,0,0,.06),0 0 0 1px rgba(0,0,0,.04)!important}
+.medo-tpl .mt-pf:hover{transform:translateY(-4px)!important;box-shadow:0 8px 30px rgba(0,0,0,.1)!important}
+.medo-tpl .mt-pf-icon{width:44px!important;height:44px!important;margin-bottom:14px!important;color:#0071e3!important;background:rgba(0,113,227,.1)!important;border-radius:12px!important;display:flex!important;align-items:center!important;justify-content:center!important}
+.medo-tpl .mt-pf-icon svg{width:24px!important;height:24px!important;stroke:currentColor!important;fill:none!important;stroke-width:1.5!important;stroke-linecap:round!important;stroke-linejoin:round!important}
+.medo-tpl .mt-pf h4{font-family:Georgia,'Times New Roman','Noto Serif',serif!important;font-size:19px!important;font-weight:700!important;color:#1d1d1f!important;letter-spacing:-.2px!important;margin-bottom:8px!important}
+.medo-tpl .mt-pf p{font-size:15px!important;color:#707070!important;line-height:1.5!important;letter-spacing:-.04px!important}
+
+/* ========== STEPS ========== */
+.medo-tpl .mt-steps{margin:0 auto!important}
+.medo-tpl .mt-step{display:flex!important;align-items:flex-start!important;gap:16px!important;padding:24px!important;background:#f5f5f7!important;border-radius:20px!important;margin-bottom:12px!important;transition:transform .3s ease,box-shadow .3s ease!important}
+.medo-tpl .mt-step:hover{transform:translateY(-2px)!important;box-shadow:0 4px 16px rgba(0,0,0,.06)!important}
+.medo-tpl .mt-step-n{width:32px!important;height:32px!important;min-width:32px!important;border-radius:999px!important;background:#0071e3!important;color:#fff!important;display:flex!important;align-items:center!important;justify-content:center!important;font-size:15px!important;font-weight:600!important;flex-shrink:0!important}
+.medo-tpl .mt-step-body h4{font-size:17px!important;font-weight:600!important;color:#1d1d1f!important;letter-spacing:-.1px!important;margin-bottom:6px!important}
+.medo-tpl .mt-step-body p{font-size:15px!important;color:#707070!important;line-height:1.5!important;letter-spacing:-.04px!important}
+
+/* ========== PROMPT BOX ========== */
+.medo-tpl .mt-prompt-box{margin:32px auto 0!important;text-align:center!important}
+.medo-tpl .mt-prompt{background:#f5f5f7!important;border-radius:20px!important;padding:24px 28px!important;margin-bottom:20px!important;border-left:4px solid #0071e3!important;text-align:left!important}
+.medo-tpl .mt-prompt-label{font-size:12px!important;font-weight:600!important;color:#0071e3!important;margin-bottom:8px!important;text-transform:uppercase!important;letter-spacing:.5px!important}
+.medo-tpl .mt-prompt-text{font-size:17px!important;color:#1d1d1f!important;font-style:italic!important;line-height:1.47!important;letter-spacing:-.1px!important}
+
+/* ========== SHOWCASE ========== */
+.medo-tpl .mt-showcase{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:20px!important}
+.medo-tpl .mt-scard{background:#f5f5f7!important;border-radius:28px!important;overflow:hidden!important;transition:transform .3s ease,box-shadow .3s ease!important;display:block!important}
+.medo-tpl .mt-scard:hover{transform:translateY(-4px)!important;box-shadow:0 8px 30px rgba(0,0,0,.1)!important}
+.medo-tpl .mt-scard-img{aspect-ratio:16/9!important;background:#eee!important;overflow:hidden!important}
+.medo-tpl .mt-scard-img img{width:100%!important;height:100%!important;object-fit:cover!important;transition:transform .4s ease!important}
+.medo-tpl .mt-scard:hover .mt-scard-img img{transform:scale(1.03)!important}
+.medo-tpl .mt-scard-body{padding:16px 24px 6px!important}
+.medo-tpl .mt-scard-body h4{font-size:17px!important;font-weight:600!important;color:#1d1d1f!important;letter-spacing:-.1px!important;margin-bottom:4px!important}
+.medo-tpl .mt-scard-body p{font-size:14px!important;color:#707070!important;letter-spacing:-.04px!important;line-height:1.43!important;display:-webkit-box!important;-webkit-line-clamp:2!important;-webkit-box-orient:vertical!important;overflow:hidden!important}
+.medo-tpl .mt-scard-meta{padding:6px 24px 16px!important;display:flex!important;gap:14px!important;font-size:12px!important;color:#707070!important}
+.medo-tpl .mt-scard-meta span{display:flex!important;align-items:center!important;gap:4px!important}
+
+/* ========== CTA BOX ========== */
+.medo-tpl .mt-cta-box{text-align:center!important;padding:80px 32px!important;background:linear-gradient(135deg,#1d1d1f 0%,#2d2d3f 100%)!important;border-radius:28px!important;margin-bottom:80px!important}
+.medo-tpl .mt-cta-box h3{font-family:Georgia,'Times New Roman','Noto Serif',serif!important;font-size:32px!important;font-weight:700!important;line-height:1.2!important;letter-spacing:-.5px!important;margin-bottom:12px!important;color:#fff!important}
+.medo-tpl .mt-cta-box p{color:rgba(255,255,255,.7)!important;font-size:17px!important;letter-spacing:-.1px!important;margin-bottom:24px!important}
+.medo-tpl .mt-cta-box .mt-cta{animation:mt-glow 3s ease-in-out infinite!important}
+.medo-tpl .mt-cta-box .mt-cta:hover{animation:none!important}
+
+/* ========== RELATED ========== */
+.medo-tpl .mt-related{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:20px!important}
+.medo-tpl .mt-rcard{background:#f5f5f7!important;border-radius:28px!important;overflow:hidden!important;transition:transform .3s ease,box-shadow .3s ease!important;display:block!important}
+.medo-tpl .mt-rcard:hover{transform:translateY(-4px)!important;box-shadow:0 8px 30px rgba(0,0,0,.1)!important}
+.medo-tpl .mt-rcard-img{aspect-ratio:16/9!important;background:#eee!important;overflow:hidden!important}
+.medo-tpl .mt-rcard-img img{width:100%!important;height:100%!important;object-fit:cover!important;transition:transform .4s ease!important}
+.medo-tpl .mt-rcard:hover .mt-rcard-img img{transform:scale(1.03)!important}
+.medo-tpl .mt-rcard-body{padding:16px 24px!important}
+.medo-tpl .mt-rcard-body h4{font-size:17px!important;font-weight:600!important;color:#1d1d1f!important;letter-spacing:-.1px!important;margin-bottom:4px!important}
+.medo-tpl .mt-rcard-body p{font-size:14px!important;color:#707070!important}
+
+/* ========== FOOTER ========== */
+.medo-tpl .mt-footer{padding:32px 0!important;text-align:center!important;color:#707070!important;font-size:14px!important;letter-spacing:-.04px!important}
+.medo-tpl .mt-footer a{color:#0066cc!important}
+
+/* ========== MOBILE ========== */
+@media(max-width:768px){
+  .medo-tpl{width:100vw!important;margin-left:-50vw!important}
+  .medo-tpl .mt-container{padding:0 16px!important}
+  .medo-tpl .mt-hero{padding:40px 0 28px!important}
+  .medo-tpl .mt-hero-badge{font-size:11px!important;padding:5px 12px!important}
+  .medo-tpl .mt-hero h2{font-size:28px!important;letter-spacing:-.4px!important;line-height:1.15!important}
+  .medo-tpl .mt-hero-desc{font-size:16px!important;font-weight:400!important;line-height:1.47!important;margin-bottom:24px!important}
+  .medo-tpl .mt-cta{font-size:15px!important;padding:10px 20px!important}
+  .medo-tpl .mt-screenshot-inline{border-radius:12px!important;margin-bottom:16px!important}
+  .medo-tpl .mt-split{grid-template-columns:1fr!important;gap:24px!important;margin-bottom:40px!important}
+  .medo-tpl .mt-split-sticky{position:static!important}
+  .medo-tpl .mt-split-left h3{font-size:22px!important;letter-spacing:-.3px!important;margin-bottom:10px!important}
+  .medo-tpl .mt-split-left>p{font-size:15px!important}
+  .medo-tpl .mt-try-btn{padding:12px 28px!important;font-size:16px!important;border-radius:12px!important}
+  .medo-tpl .mt-section{margin-bottom:40px!important}
+  .medo-tpl .mt-section-header{margin-bottom:24px!important}
+  .medo-tpl .mt-section-header h3{font-size:22px!important;letter-spacing:-.3px!important}
+  .medo-tpl .mt-section-header p{font-size:15px!important}
+  .medo-tpl .mt-features{grid-template-columns:1fr!important;gap:8px!important}
+  .medo-tpl .mt-feat{padding:18px!important;border-radius:16px!important}
+  .medo-tpl .mt-feat-icon{width:36px!important;height:36px!important;margin-bottom:10px!important;border-radius:10px!important}
+  .medo-tpl .mt-feat-icon svg{width:20px!important;height:20px!important}
+  .medo-tpl .mt-feat h4{font-size:15px!important}
+  .medo-tpl .mt-feat p{font-size:14px!important}
+  .medo-tpl .mt-pf-grid{grid-template-columns:1fr!important;gap:10px!important}
+  .medo-tpl .mt-pf{padding:20px!important;border-radius:16px!important}
+  .medo-tpl .mt-pf-icon{width:36px!important;height:36px!important;margin-bottom:10px!important;border-radius:10px!important}
+  .medo-tpl .mt-pf-icon svg{width:20px!important;height:20px!important}
+  .medo-tpl .mt-pf h4{font-size:17px!important}
+  .medo-tpl .mt-pf p{font-size:14px!important}
+  .medo-tpl .mt-step{padding:18px!important;border-radius:16px!important;margin-bottom:8px!important;gap:12px!important}
+  .medo-tpl .mt-step-n{width:28px!important;height:28px!important;min-width:28px!important;font-size:13px!important}
+  .medo-tpl .mt-step-body h4{font-size:15px!important}
+  .medo-tpl .mt-step-body p{font-size:14px!important}
+  .medo-tpl .mt-prompt{padding:20px!important;border-radius:16px!important}
+  .medo-tpl .mt-prompt-text{font-size:15px!important}
+  .medo-tpl .mt-showcase{grid-template-columns:1fr!important;gap:12px!important}
+  .medo-tpl .mt-scard{border-radius:16px!important}
+  .medo-tpl .mt-scard-body h4{font-size:15px!important}
+  .medo-tpl .mt-scard-body p{font-size:13px!important}
+  .medo-tpl .mt-cta-box{padding:40px 20px!important;border-radius:16px!important;margin-bottom:40px!important}
+  .medo-tpl .mt-cta-box h3{font-size:22px!important;letter-spacing:-.3px!important}
+  .medo-tpl .mt-cta-box p{font-size:15px!important}
+  .medo-tpl .mt-related{grid-template-columns:1fr!important;gap:12px!important}
+  .medo-tpl .mt-rcard{border-radius:16px!important}
+  .medo-tpl .mt-rcard-body h4{font-size:15px!important}
+  .medo-tpl .mt-footer{font-size:12px!important}
+}
+
+/* ========== TABLET ========== */
+@media(min-width:769px) and (max-width:1024px){
+  .medo-tpl .mt-container{padding:0 32px!important}
+  .medo-tpl .mt-hero h2{font-size:36px!important;letter-spacing:-.6px!important}
+  .medo-tpl .mt-hero-desc{font-size:18px!important}
+  .medo-tpl .mt-split{gap:32px!important}
+  .medo-tpl .mt-split-left h3{font-size:28px!important;letter-spacing:-.4px!important}
+  .medo-tpl .mt-section-header h3{font-size:28px!important;letter-spacing:-.4px!important}
+  .medo-tpl .mt-pf-grid{grid-template-columns:repeat(2,1fr)!important}
+  .medo-tpl .mt-showcase{grid-template-columns:repeat(2,1fr)!important}
+  .medo-tpl .mt-related{grid-template-columns:repeat(2,1fr)!important}
+}
+</style>
+
+<div class="medo-tpl">
+<div class="mt-container">
+
+  <!-- ===== HERO ===== -->
+  <div class="mt-hero">
+    <span class="mt-hero-badge">Education</span>
+    <h2>AI Study Companion</h2>
+    <p class="mt-hero-desc">Build an intelligent study assistant that helps students organize notes, generate flashcards, create quizzes, and track learning progress — all powered by AI.</p>
+  </div>
+
+  <!-- ===== FEATURES ===== -->
+  <div class="mt-split">
+    <div class="mt-split-left mt-split-sticky">
+      <div class="mt-screenshot-inline">
+        <img src="https://miaoda-edit-image.s3cdn.medo.dev/7mbq5z8z0lj5/IMG-7md0v1kxrk74.png" alt="AI Study Companion template preview" width="1100" height="619" loading="lazy">
+      </div>
+      <h3>Everything You Need to Study Smarter</h3>
+      <p>Built-in AI tools for flashcard generation, adaptive quizzes, and progress analytics — ready to use in minutes, not months.</p>
+      <div class="mt-try-wrap">
+        <a href="https://medo.dev/apps/app-7mbq5z8z0lj5" target="_blank" rel="noopener" class="mt-try-btn">Try it free &#x2192;</a>
+        <div class="mt-trust">Free to start · No coding · Deploy in seconds</div>
+      </div>
+    </div>
+    <div class="mt-split-right">
+      <div class="mt-features">
+      <div class="mt-feat">
+        <div class="mt-feat-icon"><svg viewBox="0 0 24 24"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg></div>
+        <h4>AI Flashcard Generation</h4>
+        <p>Paste your notes, textbook highlights, or lecture slides. AI creates study-ready flashcards matched to your actual content.</p>
+      </div>
+      <div class="mt-feat">
+        <div class="mt-feat-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+        <h4>Interactive Quizzes</h4>
+        <p>Auto-generated multiple-choice, true/false, and open-ended questions with instant explanations for every answer.</p>
+      </div>
+      <div class="mt-feat">
+        <div class="mt-feat-icon"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg></div>
+        <h4>Progress Dashboard</h4>
+        <p>Visual charts track study sessions, accuracy rates, and learning streaks. See your improvement over time at a glance.</p>
+      </div>
+      <div class="mt-feat">
+        <div class="mt-feat-icon"><svg viewBox="0 0 24 24"><path d="m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2"/></svg></div>
+        <h4>Smart Organization</h4>
+        <p>Organize materials by subject, topic, and difficulty level. Tag, search, and filter across all your study content.</p>
+      </div>
+      <div class="mt-feat">
+        <div class="mt-feat-icon"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg></div>
+        <h4>Spaced Repetition</h4>
+        <p>Scientifically-proven review scheduling. Cards surface right before you&#x27;d forget them — study less, remember more.</p>
+      </div>
+      <div class="mt-feat">
+        <div class="mt-feat-icon"><svg viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
+        <h4>Weak-Area Detection</h4>
+        <p>AI identifies topics where you struggle most and recommends targeted practice to close knowledge gaps.</p>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <!-- ===== PERFECT FOR ===== -->
+  <div class="mt-section">
+    <div class="mt-section-header">
+      <h3>Built for Every Learner</h3>
+      <p>Whether you&#x27;re a student, teacher, or building the next edtech product.</p>
+    </div>
+    <div class="mt-pf-grid">
+      <div class="mt-pf">
+        <div class="mt-pf-icon"><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 6 3 6 3s6-1 6-3v-5"/></svg></div>
+        <h4>Students</h4>
+        <p>Preparing for exams? Upload your notes and get AI-generated flashcards, practice questions, and smart review schedules that adapt to your progress.</p>
+      </div>
+      <div class="mt-pf">
+        <div class="mt-pf-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+        <h4>Teachers</h4>
+        <p>Create interactive study resources for your class in minutes. Paste curriculum content and generate quizzes, flashcard decks, and review guides.</p>
+      </div>
+      <div class="mt-pf">
+        <div class="mt-pf-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+        <h4>Professionals</h4>
+        <p>Studying for AWS, PMP, CPA, or any certification? Organize materials by exam domain and track your readiness score across topics.</p>
+      </div>
+      <div class="mt-pf">
+        <div class="mt-pf-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div>
+        <h4>Language Learners</h4>
+        <p>Build vocabulary with AI-generated flashcards, example sentences, and spaced repetition that surfaces words right before you forget them.</p>
+      </div>
+      <div class="mt-pf">
+        <div class="mt-pf-icon"><svg viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></div>
+        <h4>Edtech Founders</h4>
+        <p>Prototype a complete study app without writing code. Deploy, test with real users, and iterate — all through AI conversation.</p>
+      </div>
+      <div class="mt-pf">
+        <div class="mt-pf-icon"><svg viewBox="0 0 24 24"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg></div>
+        <h4>Tutoring Centers</h4>
+        <p>Create a branded study platform for your students with built-in progress tracking, analytics, and AI-powered content generation.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <div class="mt-section">
+    <div class="mt-section-header">
+      <h3>Start in 3 Steps</h3>
+      <p>From idea to working app in minutes.</p>
+    </div>
+    <div class="mt-steps">
+      <div class="mt-step">
+        <span class="mt-step-n">1</span>
+        <div class="mt-step-body">
+          <h4>Open MeDo and Start Building</h4>
+          <p>Click the button below. MeDo&#x27;s AI loads this template&#x27;s prompt and generates your study companion in minutes. No sign-up needed to start.</p>
+        </div>
+      </div>
+      <div class="mt-step">
+        <span class="mt-step-n">2</span>
+        <div class="mt-step-body">
+          <h4>Add Your Study Content</h4>
+          <p>Paste notes, textbook excerpts, or any learning material. AI creates flashcards, quizzes, and a study plan based on your content.</p>
+        </div>
+      </div>
+      <div class="mt-step">
+        <span class="mt-step-n">3</span>
+        <div class="mt-step-body">
+          <h4>Customize and Share</h4>
+          <p>Adjust quiz formats, add subjects, restyle the dashboard. Deploy as a web app or share a link — MeDo handles hosting, accessible from any device.</p>
+        </div>
+      </div>
+    </div>
+    <div class="mt-prompt-box">
+      <div class="mt-prompt">
+        <div class="mt-prompt-label">Recommended Prompt</div>
+        <div class="mt-prompt-text">"Create an AI study companion with flashcard generation, quiz creation, progress tracking, and spaced repetition scheduling"</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CTA BOX ===== -->
+  <div class="mt-cta-box">
+    <h3>Ready to Build Your AI Study Companion?</h3>
+    <p>No coding required. Describe what you want, and MeDo's AI builds it for you.</p>
+    <a href="https://medo.dev/?prompt=Create%20an%20AI%20study%20companion%20with%20flashcard%20generation%2C%20quiz%20creation%2C%20progress%20tracking%2C%20and%20spaced%20repetition%20scheduling" class="mt-cta">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      Create this with MeDo — It's Free
+    </a>
+  </div>
+
+  <!-- ===== RELATED ===== -->
+  <div class="mt-section">
+    <div class="mt-section-header">
+      <h3>Related Templates</h3>
+    </div>
+    <div class="mt-related">
+      <a href="https://medo.dev/apps/app-7ccwjw8p8gsh" class="mt-rcard">
+        <div class="mt-rcard-img">
+          <img src="https://miaoda-edit-image.s3cdn.medo.dev/7ccwjw8p8gsh/IMG-7cdjuo9p0jk0.png" alt="Project Management Tool template" loading="lazy">
+        </div>
+        <div class="mt-rcard-body">
+          <h4>Project Management Tool</h4>
+          <p>Productivity</p>
+        </div>
+      </a>
+      <a href="https://medo.dev/apps/app-9y0vsccu1og1" class="mt-rcard">
+        <div class="mt-rcard-img">
+          <img src="https://miaoda-screenshot-img.s3cdn.medo.dev/preview_screen/app-9y0vsccu1og1/app-9y0vsccu1og1_1774872288992_ebe3.png" alt="Developer Portfolio template" loading="lazy">
+        </div>
+        <div class="mt-rcard-body">
+          <h4>Developer Portfolio</h4>
+          <p>Personal</p>
+        </div>
+      </a>
+      <a href="https://medo.dev/apps/app-8q7vkvuq2g3l" class="mt-rcard">
+        <div class="mt-rcard-img">
+          <img src="https://miaoda-screenshot-img.s3cdn.medo.dev/preview_screen/app-8q7vkvuq2g3l/app-8q7vkvuq2g3l_1767628673162_402d.png" alt="E-commerce Store template" loading="lazy">
+        </div>
+        <div class="mt-rcard-body">
+          <h4>E-commerce Store</h4>
+          <p>Business</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- ===== SHOWCASE ===== -->
+  <div class="mt-section">
+    <div class="mt-section-header">
+      <h3>Built with MeDo</h3>
+      <p>Real apps created by MeDo users — see what's possible.</p>
+    </div>
+    <div class="mt-showcase">
+      <a href="https://medo.dev/apps/app-7mbq5z8z0lj5" target="_blank" rel="noopener" class="mt-scard">
+        <div class="mt-scard-img">
+          <img src="https://miaoda-edit-image.s3cdn.medo.dev/7mbq5z8z0lj5/IMG-7md0v1kxrk74.png" alt="SpeakEasy English" loading="lazy" width="400" height="225">
+        </div>
+        <div class="mt-scard-body">
+          <h4>SpeakEasy English</h4>
+          <p>AI-powered English conversation practice companion</p>
+        </div>
+        <div class="mt-scard-meta">
+          <span>1087 views</span>
+          <span>321 likes</span>
+        </div>
+      </a>
+      <a href="https://medo.dev/apps/app-6s6nf1wtxzpd" target="_blank" rel="noopener" class="mt-scard">
+        <div class="mt-scard-img">
+          <img src="https://miaoda-edit-image.s3cdn.medo.dev/6s6nf1wtxzpd/IMG-6s733cr1mxhc.png" alt="Function Graphing Tool" loading="lazy" width="400" height="225">
+        </div>
+        <div class="mt-scard-body">
+          <h4>Function Graphing Tool</h4>
+          <p>Interactive function graphing with custom parameters</p>
+        </div>
+        <div class="mt-scard-meta">
+          <span>529 views</span>
+          <span>268 likes</span>
+        </div>
+      </a>
+      <a href="https://medo.dev/apps/app-7ycjfcj3277k" target="_blank" rel="noopener" class="mt-scard">
+        <div class="mt-scard-img">
+          <img src="https://miaoda-edit-image.s3cdn.medo.dev/7ycjfcj3277k/IMG-7ydzfkyuno5c.png" alt="StudyFlow Dashboard" loading="lazy" width="400" height="225">
+        </div>
+        <div class="mt-scard-body">
+          <h4>StudyFlow Dashboard</h4>
+          <p>Visual learning analytics dashboard with progress tracking</p>
+        </div>
+        <div class="mt-scard-meta">
+          <span>3524 views</span>
+          <span>410 likes</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="mt-footer">
+    <p>&copy; 2026 <a href="https://medo.dev">MeDo</a>. Build any app with AI — no coding required.</p>
+  </div>
+
+</div>
+</div>
